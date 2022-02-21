@@ -1,0 +1,618 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0; 
+}
+
+.jumbotron-fluid {
+  background-color: #2548bb;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='540' height='450' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='.1'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.skillsection .col-auto{
+  max-width: 18rem;
+}
+
+.box div{
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 8px solid rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+}
+
+.box div:nth-child(1){
+  top: 12%;
+  left: 42%;
+  width: 100px;
+  height: 100px;
+  animation: animate 5s linear infinite;
+}
+
+.box div:nth-child(2){
+  top: 70%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  animation: animate 7s linear infinite;
+}
+
+.box div:nth-child(3){
+  top: 17%;
+  left: 6%;
+  width: 150px;
+  height: 150px;
+  animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(4){
+  top: 20%;
+  left: 60%;
+  width: 140px;
+  height: 140px;
+  animation: animate 10s linear infinite;
+}
+
+.box div:nth-child(5){
+  top: 67%;
+  left: 10%;
+  animation: animate 7s linear infinite;
+}
+
+.box div:nth-child(6){
+  top: 80%;
+  left: 70%;
+  animation: animate 12s linear infinite;
+}
+
+.box div:nth-child(7){
+  top: 60%;
+  left: 80%;
+  animation: animate 11s linear infinite;
+}
+
+.box div:nth-child(8){
+  top: 32%;
+  left: 25%;
+  animation: animate 12s linear infinite;
+}
+
+.box div:nth-child(9){
+  top: 90%;
+  left: 25%;
+  width: 150px;
+  height: 150px;
+  animation: animate 9s linear infinite;
+}
+
+.box div:nth-child(10){
+  top: 20%;
+  left: 80%;
+  width: 140px;
+  height: 140px;
+  animation: animate 8s linear infinite;
+}
+
+@keyframes animate{
+  0%{
+      transform: scale(0) translateY(0) rotate(0);
+      opacity: 1;
+  }
+  100%{
+    transform: scale(1.3) translateY(-90px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.navbar-toggler:hover {
+  background: rgba(13, 107, 240, 0.8);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0);
+}
+
+#home:hover {
+  color: white;
+}
+
+#contact:hover {
+  color: white;
+}
+
+#projects:hover {
+  color: white;
+}
+
+#about:hover {
+  color: white;
+}
+
+#home {
+  color: rgb(211, 227, 250);
+}
+
+#contact {
+  color: rgb(211, 227, 250);
+}
+
+#projects {
+  color: rgb(211, 227, 250);
+}
+
+#about {
+  color: rgb(211, 227, 250);
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  opacity: 0.8;
+  z-index: 1;
+  border-radius: 2px;
+}
+
+.navbar:hover {
+  opacity: 1;
+}
+
+.navbar-brand {
+  font-size: 1.85rem;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.navbar-brand:hover {
+  text-shadow: 2px 2px 8px black;
+}
+
+.jumbotron-fluid h1 {
+  font-size: 3.75rem;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom:0;
+}
+
+.aboutsection h1 {
+  display: block;
+  margin: auto;
+  width: 50%;
+  border-bottom: 1px solid rgba(3, 87, 204, 0.8);
+  text-align: center;
+  font-size: 2.25rem;
+  color: #4b4747;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.25rem;
+  color: #4b4747;
+}
+
+.aboutsection .lead {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+.aboutsection {
+  margin-bottom: 65px;
+  margin-top:0px;
+  padding-top:0px;
+}
+
+.aboutsection span {
+  font-weight: bold;
+}
+
+.worklink {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+.worklink a {
+  text-decoration-line: none;
+  border: 3px solid #0d86ff;
+  border-radius: 40px;
+  padding: 30px;
+  padding-left: 95px;
+  padding-right: 95px;
+  display: inline-block;
+  color: #0d86ff;
+  font-weight: bold;
+  box-shadow: 0 6px 8px 0 rgba(0, 0, 0, 0.4), 0 10px 20px 0 rgba(0, 0, 0, 0);
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
+  margin: auto;
+}
+
+.worklink a:hover {
+  color: white;
+  background: #0d86ff;
+  border: 3px solid #0051a1;
+  transition: all linear 0.25s;
+  top: -5px;
+  box-shadow: 8px 8px 12px 0px rgba(0, 0, 0, 0.4), 0px 10px 12px 0 rgba(0, 0, 0, 0);
+}
+
+.worklink span {
+  text-align: center;
+  margin-right: 25px;
+  margin-left: 25px;
+}
+
+.projectdisplay {
+  background: #ececec;
+  border-top: solid 0.5px;
+  border-bottom: solid 0.5px;
+}
+
+.card {
+  text-align: left;
+  font-family: "Noto Sans", sans-serif;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0);
+}
+
+.card h4 {
+  padding-left: 10px;
+  padding-top: 20px;
+  font-weight: bold;
+}
+
+.cardtext {
+  text-align: left;
+  padding-top: 20px;
+  padding-right: 10px;
+  padding-left: 10px;
+  font-family: "Noto Sans", sans-serif;
+}
+
+.skillsection h1{
+  display: block;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+  font-size: 2.25rem;
+  color: #4b4747;
+  padding-top: 81px;
+}
+
+.card-img-top {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+  padding-left: 60px;
+  padding-right: 60px;
+  padding-bottom:60px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+.skillsection{
+  margin-bottom: 65px;
+}
+
+.contactpage {
+  background: #2985be;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0);
+}
+
+.customContainer{
+  max-width: 1300px;
+  margin: auto;
+}
+
+.changetextcolour {
+  text-align: center;
+  color: white;
+}
+
+.changeWidth {
+  text-align: left;
+}
+
+form {
+  text-align: center;
+  border-radius: none;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  margin: 0;
+}
+
+#button1 {
+  margin-bottom: 10px;
+  background: white;
+  z-index: 1;
+  color: #1f82c0;
+  font-weight: bold;
+  outline: none;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 350px;
+  cursor: pointer;
+}
+
+#button1:hover {
+  border-radius: 8px;
+  transition: all ease-out 0.75s;
+  box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.24), 0 40px 80px 0 rgba(0, 0, 0, 0);
+  color: #37abf3;
+}
+
+.changeWidth {
+  width: 350px;
+  background: rgba(26, 70, 131, 0.8);
+  border: none;
+  color: white;
+  z-index: 1;
+  padding-left: 2px;
+  margin: auto;
+}
+
+form textarea {
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  padding-bottom: 100px;
+  z-index: 1;
+}
+
+::placeholder {
+  color: white;
+}
+
+input:focus {
+  background-color: rgba(26, 70, 131, 1);
+}
+
+textarea:focus {
+  background-color: rgba(26, 70, 131, 1);
+}
+
+.infoforcontact {
+  color: white;
+  text-align: center;
+  padding-bottom: 40px;
+}
+
+.contactpage{
+  padding-top:40px;
+  padding-bottom:40px;
+}
+
+.backtotop {
+  font-weight: bolder;
+  text-align: center;
+  padding-bottom: 40px;
+  padding-top: 40px;
+}
+
+.card-title{
+  font-size:20px;
+  text-decoration-line:underline;
+  text-decoration-color:#147ab9
+}
+
+.backtotop a {
+  padding-right: 8px;
+  padding-left: 8px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#addmarginforcard {
+  margin-top: 40px;
+}
+
+#addmarginforcardblock{
+  margin-top: 0px;
+}
+
+i:hover {
+  color: #0a0a0a;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+    padding-right: 120px;
+    padding-left: 120px;
+    padding-bottom:20px;
+  }
+}
+
+@media screen and (max-width: 860px) { 
+  .skillsection .col-auto{
+    max-width: 11.5rem;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+    padding-right: 60px;
+    padding-left: 60px;
+    padding-bottom:20px;
+  }
+
+  .skillsection .col-auto{
+    max-width: 9.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom:20px;
+  }
+}
+
+@media screen and (max-width:1400px){
+  .customContainer{
+    max-width: 95%;
+  }
+}
+
+@media screen and (max-width:575px){
+    #addmarginforcardblock{
+      margin-top: 40px;
+    }
+  }
+
+@media screen and (max-width: 700px){
+  .skillsection .card{
+    margin: 0 0 15 auto;
+    float: none;
+  }
+
+  .box div{
+    width: 0px;
+    height: 0px;
+    border: 0px;
+  }
+  
+  .box div:nth-child(1){
+    width: 0px;
+    height: 0px;
+  }
+  
+  .box div:nth-child(2){
+    width: 0px;
+    height: 0px;
+  }
+  
+  .box div:nth-child(3){
+    width: 0px;
+    height: 0px;
+  }
+  
+  .box div:nth-child(4){
+    width: 0px;
+    height: 0px;
+  }
+  
+  .box div:nth-child(5){
+    width: 0px;
+    height: 0px;
+  }
+  
+  .box div:nth-child(6){
+    width: 0px;
+    height: 0px;
+  }
+  
+  .box div:nth-child(7){
+    width: 0px;
+    height: 0px;
+  }
+  
+  .box div:nth-child(8){
+    width: 0px;
+    height: 0px;
+  }
+  
+  .box div:nth-child(9){
+    width: 0px;
+    height: 0px;
+  }
+  
+  .box div:nth-child(10){
+    width: 0px;
+    height: 0px;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  .navbar {
+    width: 100%;
+  }
+
+  a {
+    text-decoration-line: none;
+  }
+
+  a:hover {
+    text-decoration-line: none;
+  }
+
+  .worklink span {
+    display: block;
+    margin-top: 50px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .worklink {
+    text-align: center;
+  }
+
+  .worklink a {
+    display: block;
+    max-width: 300px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .jumbotron-fluid h1 {
+    font-size: 3.25rem;
+  }
+
+  .aboutsection h1 {
+    width: 100%;
+  }
+
+  .card .lead {
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  #addmarginforcard {
+    margin-top: 40px;
+  }
+
+  .customContainer{
+    max-width:95%;
+  }
+
+  .changeWidth {
+    width: 275px;
+  }
+
+  #button1 {
+    width: 275px;
+  }
+
+  .backtotop {
+    padding-bottom: 30px;
+    margin-bottom: 0;
+  }
+}

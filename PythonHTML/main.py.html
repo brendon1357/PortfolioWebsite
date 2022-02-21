@@ -1,0 +1,296 @@
+<html>
+<head>
+<title>main.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6a8759;}
+.s3 { color: #6897bb;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">pygame</span>
+<span class="s0">import </span><span class="s1">random</span>
+<span class="s0">import </span><span class="s1">math</span>
+<span class="s0">from </span><span class="s1">sys </span><span class="s0">import </span><span class="s1">exit</span>
+
+
+<span class="s0">def </span><span class="s1">intro_screen():</span>
+    <span class="s1">pygame.init()</span>
+
+    <span class="s1">font = pygame.font.SysFont(</span><span class="s2">&quot;arial&quot;</span><span class="s0">, </span><span class="s3">30</span><span class="s1">)</span>
+
+    <span class="s1">header_font = pygame.font.SysFont(</span><span class="s2">&quot;arial&quot;</span><span class="s0">, </span><span class="s3">46</span><span class="s1">)</span>
+
+    <span class="s1">topIcon = pygame.image.load(</span><span class="s2">&quot;space-ship (2).png&quot;</span><span class="s1">)</span>
+
+    <span class="s1">pygame.display.set_icon(topIcon)</span>
+
+    <span class="s1">pygame.display.set_caption(</span><span class="s2">&quot;Space Invaders Remake&quot;</span><span class="s1">)</span>
+
+    <span class="s1">intro_message = header_font.render(</span><span class="s2">&quot;Space Invaders Remake&quot;</span><span class="s0">, True, </span><span class="s1">(</span><span class="s3">0</span><span class="s0">, </span><span class="s3">255</span><span class="s0">, </span><span class="s3">0</span><span class="s1">))</span>
+    <span class="s1">intro_message_2 = font.render(</span><span class="s2">&quot;Spacebar - Start game&quot;</span><span class="s0">, True, </span><span class="s1">(</span><span class="s3">255</span><span class="s0">, </span><span class="s3">255</span><span class="s0">, </span><span class="s3">255</span><span class="s1">))</span>
+    <span class="s1">intro_message_3 = font.render(</span><span class="s2">&quot;ESC - Exit game&quot;</span><span class="s0">, True, </span><span class="s1">(</span><span class="s3">255</span><span class="s0">, </span><span class="s3">255</span><span class="s0">, </span><span class="s3">255</span><span class="s1">))</span>
+    <span class="s1">intro_message_4 = font.render(</span><span class="s2">&quot;R - Restart game/return to main menu&quot;</span><span class="s0">, True, </span><span class="s1">(</span><span class="s3">255</span><span class="s0">, </span><span class="s3">255</span><span class="s0">, </span><span class="s3">255</span><span class="s1">))</span>
+
+    <span class="s1">windowScreen = pygame.display.set_mode((</span><span class="s3">800</span><span class="s0">, </span><span class="s3">600</span><span class="s1">))</span>
+
+    <span class="s1">intro = </span><span class="s0">True</span>
+
+    <span class="s0">while </span><span class="s1">intro:</span>
+
+        <span class="s1">windowScreen.fill((</span><span class="s3">0</span><span class="s0">, </span><span class="s3">0</span><span class="s0">, </span><span class="s3">0</span><span class="s1">))</span>
+
+        <span class="s1">windowScreen.blit(intro_message</span><span class="s0">, </span><span class="s1">[</span><span class="s3">800</span><span class="s1">/</span><span class="s3">2 </span><span class="s1">- intro_message.get_width()/</span><span class="s3">2</span><span class="s0">, </span><span class="s3">200</span><span class="s1">/</span><span class="s3">2 </span><span class="s1">- intro_message.get_height()/</span><span class="s3">2</span><span class="s1">])</span>
+        <span class="s1">windowScreen.blit(intro_message_2</span><span class="s0">, </span><span class="s1">[</span><span class="s3">800</span><span class="s1">/</span><span class="s3">2 </span><span class="s1">- intro_message_2.get_width()/</span><span class="s3">2</span><span class="s0">, </span><span class="s3">400</span><span class="s1">/</span><span class="s3">2 </span><span class="s1">- intro_message_2.get_height()/</span><span class="s3">2</span><span class="s1">])</span>
+        <span class="s1">windowScreen.blit(intro_message_3</span><span class="s0">, </span><span class="s1">[</span><span class="s3">800</span><span class="s1">/</span><span class="s3">2 </span><span class="s1">- intro_message_3.get_width()/</span><span class="s3">2</span><span class="s0">, </span><span class="s3">600</span><span class="s1">/</span><span class="s3">2 </span><span class="s1">- intro_message_3.get_height()/</span><span class="s3">2</span><span class="s1">])</span>
+        <span class="s1">windowScreen.blit(intro_message_4</span><span class="s0">, </span><span class="s1">[</span><span class="s3">800</span><span class="s1">/</span><span class="s3">2 </span><span class="s1">- intro_message_4.get_width()/</span><span class="s3">2</span><span class="s0">, </span><span class="s3">800</span><span class="s1">/</span><span class="s3">2 </span><span class="s1">- intro_message_4.get_height()/</span><span class="s3">2</span><span class="s1">])</span>
+
+        <span class="s0">for </span><span class="s1">event </span><span class="s0">in </span><span class="s1">pygame.event.get():</span>
+            <span class="s0">if </span><span class="s1">event.type == pygame.QUIT:</span>
+                <span class="s1">intro = </span><span class="s0">False</span>
+                <span class="s1">exit()</span>
+
+            <span class="s0">if </span><span class="s1">event.type == pygame.KEYDOWN:</span>
+                <span class="s0">if </span><span class="s1">event.key == pygame.K_SPACE:</span>
+                    <span class="s1">main()</span>
+                <span class="s0">elif </span><span class="s1">event.key == pygame.K_ESCAPE:</span>
+                    <span class="s1">intro = </span><span class="s0">False</span>
+                    <span class="s1">exit()</span>
+
+        <span class="s1">pygame.display.update()</span>
+
+
+<span class="s0">def </span><span class="s1">main():</span>
+    <span class="s1">pygame.init()</span>
+
+    <span class="s1">backgroundImg = pygame.image.load(</span><span class="s2">&quot;Spacepic.jpg&quot;</span><span class="s1">)</span>
+
+    <span class="s1">windowScreen = pygame.display.set_mode((</span><span class="s3">800</span><span class="s0">, </span><span class="s3">600</span><span class="s1">))</span>
+
+    <span class="s1">score_num = </span><span class="s3">0</span>
+    <span class="s1">font = pygame.font.SysFont(</span><span class="s2">&quot;arial&quot;</span><span class="s0">, </span><span class="s3">30</span><span class="s1">)</span>
+
+    <span class="s1">topIcon = pygame.image.load(</span><span class="s2">&quot;space-ship (2).png&quot;</span><span class="s1">)</span>
+
+    <span class="s1">pygame.display.set_icon(topIcon)</span>
+
+    <span class="s1">pygame.display.set_caption(</span><span class="s2">&quot;Space Invaders Remake&quot;</span><span class="s1">)</span>
+
+    <span class="s1">playerImg = pygame.image.load(</span><span class="s2">&quot;space-invaders.png&quot;</span><span class="s1">)</span>
+    <span class="s1">playerX = </span><span class="s3">370</span>
+    <span class="s1">playerY = </span><span class="s3">480</span>
+    <span class="s1">playerX_change = </span><span class="s3">0</span>
+
+    <span class="s1">enemyImg = []</span>
+    <span class="s1">enemyX = []</span>
+    <span class="s1">enemyY = []</span>
+    <span class="s1">enemyX_change = []</span>
+    <span class="s1">enemyY_change = []</span>
+    <span class="s1">num_of_enemies = </span><span class="s3">12</span>
+    <span class="s1">initial_num_of_enemies = </span><span class="s3">6</span>
+
+    <span class="s1">bulletImg = pygame.image.load(</span><span class="s2">&quot;bullet.png&quot;</span><span class="s1">)</span>
+    <span class="s1">bulletX = </span><span class="s3">0</span>
+    <span class="s1">bulletY = </span><span class="s3">480</span>
+    <span class="s1">bulletY_change = </span><span class="s3">20</span>
+    <span class="s1">bullet_state = </span><span class="s2">&quot;ready&quot;</span>
+
+    <span class="s1">lives = </span><span class="s3">3</span>
+    <span class="s1">end_lives = </span><span class="s3">0</span>
+
+    <span class="s0">for </span><span class="s1">i </span><span class="s0">in </span><span class="s1">range(num_of_enemies):</span>
+        <span class="s1">enemyImg.append(pygame.image.load(</span><span class="s2">&quot;ufo.png&quot;</span><span class="s1">))</span>
+        <span class="s1">enemyX.append(random.randint(</span><span class="s3">0</span><span class="s0">, </span><span class="s3">736</span><span class="s1">))</span>
+        <span class="s1">enemyY.append(random.randint(</span><span class="s3">0</span><span class="s0">, </span><span class="s3">0</span><span class="s1">))</span>
+        <span class="s1">enemyX_change.append(</span><span class="s3">8</span><span class="s1">)</span>
+        <span class="s1">enemyY_change.append(</span><span class="s3">40</span><span class="s1">)</span>
+        <span class="s1">num_of_enemies = initial_num_of_enemies</span>
+
+
+    <span class="s0">def </span><span class="s1">isCollision():</span>
+        <span class="s1">distance = math.sqrt((math.pow(enemyX[i] - bulletX</span><span class="s0">, </span><span class="s3">2</span><span class="s1">)) + (math.pow(enemyY[i] - bulletY</span><span class="s0">, </span><span class="s3">2</span><span class="s1">)))</span>
+        <span class="s0">if </span><span class="s1">distance &lt; </span><span class="s3">28</span><span class="s1">:</span>
+            <span class="s0">return True</span>
+        <span class="s0">else</span><span class="s1">:</span>
+            <span class="s0">return False</span>
+
+    <span class="s0">def </span><span class="s1">show_score():</span>
+        <span class="s1">score = font.render(</span><span class="s2">&quot;Score: &quot; </span><span class="s1">+ str(score_num)</span><span class="s0">, True, </span><span class="s1">(</span><span class="s3">0</span><span class="s0">, </span><span class="s3">255</span><span class="s0">, </span><span class="s3">0</span><span class="s1">))</span>
+        <span class="s1">windowScreen.blit(score</span><span class="s0">, </span><span class="s1">[</span><span class="s3">800</span><span class="s1">/</span><span class="s3">2 </span><span class="s1">- score.get_width()/</span><span class="s3">2</span><span class="s0">, </span><span class="s3">5</span><span class="s1">])</span>
+
+
+    <span class="s0">def </span><span class="s1">show_score_to_win():</span>
+        <span class="s1">win_score = font.render(</span><span class="s2">&quot;Score to win: 100&quot;</span><span class="s0">, True, </span><span class="s1">(</span><span class="s3">255</span><span class="s0">, </span><span class="s3">255</span><span class="s0">, </span><span class="s3">255</span><span class="s1">))</span>
+        <span class="s1">windowScreen.blit(win_score</span><span class="s0">, </span><span class="s1">(</span><span class="s3">10</span><span class="s0">, </span><span class="s3">5</span><span class="s1">))</span>
+
+
+    <span class="s0">def </span><span class="s1">you_win_msg():</span>
+        <span class="s1">win_text = font.render(</span><span class="s2">&quot;You win, CONGRATULATIONS!&quot;</span><span class="s0">, True, </span><span class="s1">(</span><span class="s3">255</span><span class="s0">, </span><span class="s3">255</span><span class="s0">, </span><span class="s3">255</span><span class="s1">))</span>
+        <span class="s1">windowScreen.blit(win_text</span><span class="s0">, </span><span class="s1">[</span><span class="s3">800</span><span class="s1">/</span><span class="s3">2 </span><span class="s1">- win_text.get_width()/</span><span class="s3">2</span><span class="s0">, </span><span class="s3">200 </span><span class="s1">- win_text.get_height()/</span><span class="s3">2</span><span class="s1">])</span>
+        <span class="s0">if </span><span class="s1">lives == </span><span class="s3">1</span><span class="s1">:</span>
+            <span class="s1">show_lives_left = font.render(</span><span class="s2">&quot;You had &quot; </span><span class="s1">+ str(lives) + </span><span class="s2">&quot; life left&quot;</span><span class="s0">, True, </span><span class="s1">(</span><span class="s3">255</span><span class="s0">, </span><span class="s3">255</span><span class="s0">, </span><span class="s3">255</span><span class="s1">))</span>
+            <span class="s1">windowScreen.blit(show_lives_left</span><span class="s0">,</span>
+                              <span class="s1">[</span><span class="s3">800</span><span class="s1">/</span><span class="s3">2 </span><span class="s1">- show_lives_left.get_width()/</span><span class="s3">2</span><span class="s0">, </span><span class="s3">275 </span><span class="s1">- show_lives_left.get_height()/</span><span class="s3">2</span><span class="s1">])</span>
+        <span class="s0">elif </span><span class="s1">lives == </span><span class="s3">2 </span><span class="s0">or </span><span class="s3">3</span><span class="s1">:</span>
+            <span class="s1">show_lives_left = font.render(</span><span class="s2">&quot;You had &quot; </span><span class="s1">+ str(lives) + </span><span class="s2">&quot; lives left&quot;</span><span class="s0">, True, </span><span class="s1">(</span><span class="s3">255</span><span class="s0">, </span><span class="s3">255</span><span class="s0">, </span><span class="s3">255</span><span class="s1">))</span>
+            <span class="s1">windowScreen.blit(show_lives_left</span><span class="s0">, </span><span class="s1">[</span><span class="s3">800</span><span class="s1">/</span><span class="s3">2 </span><span class="s1">- show_lives_left.get_width()/</span><span class="s3">2</span><span class="s0">, </span><span class="s3">275 </span><span class="s1">- show_lives_left.get_height()/</span><span class="s3">2</span><span class="s1">])</span>
+        <span class="s1">return_text = font.render(</span><span class="s2">&quot;Press R to return to the main menu&quot;</span><span class="s0">, True, </span><span class="s1">(</span><span class="s3">255</span><span class="s0">, </span><span class="s3">255</span><span class="s0">, </span><span class="s3">255</span><span class="s1">))</span>
+        <span class="s1">windowScreen.blit(return_text</span><span class="s0">, </span><span class="s1">[</span><span class="s3">800</span><span class="s1">/</span><span class="s3">2 </span><span class="s1">- return_text.get_width()/</span><span class="s3">2</span><span class="s0">, </span><span class="s3">350 </span><span class="s1">- return_text.get_height()/</span><span class="s3">2</span><span class="s1">])</span>
+
+
+    <span class="s0">def </span><span class="s1">game_over():</span>
+        <span class="s1">lose_text = font.render(</span><span class="s2">&quot;You lose, GAME OVER!&quot;</span><span class="s0">, True, </span><span class="s1">(</span><span class="s3">255</span><span class="s0">, </span><span class="s3">255</span><span class="s0">, </span><span class="s3">255</span><span class="s1">))</span>
+        <span class="s1">windowScreen.blit(lose_text</span><span class="s0">, </span><span class="s1">[</span><span class="s3">800</span><span class="s1">/</span><span class="s3">2 </span><span class="s1">- lose_text.get_width()/</span><span class="s3">2</span><span class="s0">, </span><span class="s3">400</span><span class="s1">/</span><span class="s3">2 </span><span class="s1">- lose_text.get_height()/</span><span class="s3">2</span><span class="s1">])</span>
+        <span class="s1">return_text = font.render(</span><span class="s2">&quot;Press R to return to the main menu&quot;</span><span class="s0">, True, </span><span class="s1">(</span><span class="s3">255</span><span class="s0">, </span><span class="s3">255</span><span class="s0">, </span><span class="s3">255</span><span class="s1">))</span>
+        <span class="s1">windowScreen.blit(return_text</span><span class="s0">, </span><span class="s1">[</span><span class="s3">800 </span><span class="s1">/ </span><span class="s3">2 </span><span class="s1">- return_text.get_width() / </span><span class="s3">2</span><span class="s0">, </span><span class="s3">600 </span><span class="s1">/ </span><span class="s3">2 </span><span class="s1">- return_text.get_height() / </span><span class="s3">2</span><span class="s1">])</span>
+
+
+    <span class="s0">def </span><span class="s1">player():</span>
+        <span class="s1">windowScreen.blit(playerImg</span><span class="s0">, </span><span class="s1">(playerX</span><span class="s0">, </span><span class="s1">playerY))</span>
+
+
+    <span class="s0">def </span><span class="s1">enemy(x</span><span class="s0">, </span><span class="s1">y</span><span class="s0">, </span><span class="s1">i):</span>
+        <span class="s1">windowScreen.blit(enemyImg[i]</span><span class="s0">, </span><span class="s1">(x</span><span class="s0">, </span><span class="s1">y))</span>
+
+
+    <span class="s0">def </span><span class="s1">show_lives():</span>
+        <span class="s1">lives_display = font.render(</span><span class="s2">&quot;Lives: &quot; </span><span class="s1">+ str(lives)</span><span class="s0">, True, </span><span class="s1">(</span><span class="s3">255</span><span class="s0">, </span><span class="s3">255</span><span class="s0">, </span><span class="s3">255</span><span class="s1">))</span>
+        <span class="s1">windowScreen.blit(lives_display</span><span class="s0">, </span><span class="s1">(</span><span class="s3">10</span><span class="s0">, </span><span class="s3">35</span><span class="s1">))</span>
+
+
+    <span class="s0">def </span><span class="s1">draw_line():</span>
+        <span class="s1">color_line = (</span><span class="s3">255</span><span class="s0">, </span><span class="s3">0</span><span class="s0">, </span><span class="s3">0</span><span class="s1">)</span>
+        <span class="s1">pygame.draw.line(windowScreen</span><span class="s0">, </span><span class="s1">color_line</span><span class="s0">, </span><span class="s1">(</span><span class="s3">0</span><span class="s0">, </span><span class="s3">445</span><span class="s1">)</span><span class="s0">, </span><span class="s1">(</span><span class="s3">800</span><span class="s0">, </span><span class="s3">445</span><span class="s1">))</span>
+
+
+    <span class="s1">rungame = </span><span class="s0">True</span>
+
+    <span class="s0">while </span><span class="s1">rungame:</span>
+
+        <span class="s1">windowScreen.fill((</span><span class="s3">0</span><span class="s0">, </span><span class="s3">0</span><span class="s0">, </span><span class="s3">0</span><span class="s1">))</span>
+        <span class="s1">windowScreen.blit(backgroundImg</span><span class="s0">, </span><span class="s1">(</span><span class="s3">0</span><span class="s0">, </span><span class="s3">0</span><span class="s1">))</span>
+        <span class="s0">for </span><span class="s1">event </span><span class="s0">in </span><span class="s1">pygame.event.get():</span>
+            <span class="s0">if </span><span class="s1">event.type == pygame.QUIT:</span>
+                <span class="s1">rungame = </span><span class="s0">False</span>
+                <span class="s1">exit()</span>
+
+            <span class="s0">if </span><span class="s1">event.type == pygame.KEYDOWN:</span>
+                <span class="s0">if </span><span class="s1">event.key == pygame.K_LEFT:</span>
+                    <span class="s1">playerX_change = -</span><span class="s3">5</span>
+                <span class="s0">if </span><span class="s1">event.key == pygame.K_RIGHT:</span>
+                    <span class="s1">playerX_change = </span><span class="s3">5</span>
+                <span class="s0">if </span><span class="s1">event.key == pygame.K_SPACE:</span>
+                    <span class="s0">if </span><span class="s1">bullet_state </span><span class="s0">is </span><span class="s2">&quot;ready&quot;</span><span class="s1">:</span>
+                        <span class="s1">bulletX = playerX</span>
+                        <span class="s1">bullet_state = </span><span class="s2">&quot;fire&quot;</span>
+                        <span class="s1">windowScreen.blit(bulletImg</span><span class="s0">, </span><span class="s1">(bulletX + </span><span class="s3">15</span><span class="s0">, </span><span class="s1">bulletY))</span>
+                <span class="s0">if </span><span class="s1">event.key == pygame.K_ESCAPE:</span>
+                    <span class="s1">rungame = </span><span class="s0">False</span>
+                    <span class="s1">exit()</span>
+                <span class="s0">if </span><span class="s1">event.key == pygame.K_r:</span>
+                    <span class="s1">intro_screen()</span>
+
+            <span class="s0">if </span><span class="s1">event.type == pygame.KEYUP:</span>
+                <span class="s0">if </span><span class="s1">event.key == pygame.K_LEFT:</span>
+                    <span class="s0">if </span><span class="s1">playerX_change &lt; </span><span class="s3">0</span><span class="s1">:</span>
+                        <span class="s1">playerX_change = </span><span class="s3">0</span>
+                <span class="s0">if </span><span class="s1">event.key == pygame.K_RIGHT:</span>
+                    <span class="s0">if </span><span class="s1">playerX_change &gt; </span><span class="s3">0</span><span class="s1">:</span>
+                        <span class="s1">playerX_change = </span><span class="s3">0</span>
+
+        <span class="s1">playerX += playerX_change</span>
+
+        <span class="s0">if </span><span class="s1">playerX &lt;= </span><span class="s3">0</span><span class="s1">:</span>
+            <span class="s1">playerX = </span><span class="s3">0</span>
+        <span class="s0">if </span><span class="s1">playerX &gt;= </span><span class="s3">736</span><span class="s1">:</span>
+            <span class="s1">playerX = </span><span class="s3">736</span>
+
+        <span class="s0">for </span><span class="s1">i </span><span class="s0">in </span><span class="s1">range(num_of_enemies):</span>
+            <span class="s1">enemy(enemyX[i]</span><span class="s0">, </span><span class="s1">enemyY[i]</span><span class="s0">, </span><span class="s1">i)</span>
+            <span class="s1">enemyX[i] += enemyX_change[i]</span>
+            <span class="s0">if </span><span class="s3">0 </span><span class="s1">&lt;= score_num &lt; </span><span class="s3">20</span><span class="s1">:</span>
+                <span class="s0">if </span><span class="s1">enemyX[i] &lt;= </span><span class="s3">0</span><span class="s1">:</span>
+                    <span class="s1">enemyX_change[i] = </span><span class="s3">5</span>
+                    <span class="s1">enemyY[i] += enemyY_change[i]</span>
+                <span class="s0">if </span><span class="s1">enemyX[i] &gt;= </span><span class="s3">736</span><span class="s1">:</span>
+                    <span class="s1">enemyX_change[i] = -</span><span class="s3">5</span>
+                    <span class="s1">enemyY[i] += enemyY_change[i]</span>
+            <span class="s0">if </span><span class="s3">20 </span><span class="s1">&lt;= score_num &lt; </span><span class="s3">40</span><span class="s1">:</span>
+                <span class="s0">if </span><span class="s1">enemyX[i] &lt;= </span><span class="s3">0</span><span class="s1">:</span>
+                    <span class="s1">enemyX_change[i] = </span><span class="s3">5.5</span>
+                    <span class="s1">enemyY[i] += enemyY_change[i]</span>
+                <span class="s0">if </span><span class="s1">enemyX[i] &gt;= </span><span class="s3">736</span><span class="s1">:</span>
+                    <span class="s1">enemyX_change[i] = -</span><span class="s3">5.5</span>
+                    <span class="s1">enemyY[i] += enemyY_change[i]</span>
+            <span class="s0">if </span><span class="s3">40 </span><span class="s1">&lt;= score_num &lt; </span><span class="s3">80</span><span class="s1">:</span>
+                <span class="s0">if </span><span class="s1">enemyX[i] &lt;= </span><span class="s3">0</span><span class="s1">:</span>
+                    <span class="s1">enemyX_change[i] = </span><span class="s3">6.5</span>
+                    <span class="s1">enemyY[i] += enemyY_change[i]</span>
+                <span class="s0">if </span><span class="s1">enemyX[i] &gt;= </span><span class="s3">736</span><span class="s1">:</span>
+                    <span class="s1">enemyX_change[i] = -</span><span class="s3">6.5</span>
+                    <span class="s1">enemyY[i] += enemyY_change[i]</span>
+            <span class="s0">if </span><span class="s3">80 </span><span class="s1">&lt;= score_num &lt; </span><span class="s3">100</span><span class="s1">:</span>
+                <span class="s0">if </span><span class="s1">enemyX[i] &lt;= </span><span class="s3">0</span><span class="s1">:</span>
+                    <span class="s1">enemyX_change[i] = </span><span class="s3">7.25</span>
+                    <span class="s1">enemyY[i] += enemyY_change[i]</span>
+                <span class="s0">if </span><span class="s1">enemyX[i] &gt;= </span><span class="s3">736</span><span class="s1">:</span>
+                    <span class="s1">enemyX_change[i] = -</span><span class="s3">7.25</span>
+                    <span class="s1">enemyY[i] += enemyY_change[i]</span>
+
+            <span class="s1">collision = isCollision()</span>
+            <span class="s0">if </span><span class="s1">collision:</span>
+                <span class="s1">bulletY = </span><span class="s3">480</span>
+                <span class="s1">bullet_state = </span><span class="s2">&quot;ready&quot;</span>
+                <span class="s1">score_num += </span><span class="s3">1</span>
+                <span class="s1">enemyX[i] = random.randint(</span><span class="s3">0</span><span class="s0">, </span><span class="s3">736</span><span class="s1">)</span>
+                <span class="s1">enemyY[i] = random.randint(</span><span class="s3">0</span><span class="s0">, </span><span class="s3">0</span><span class="s1">)</span>
+
+            <span class="s0">if </span><span class="s3">60 </span><span class="s1">&lt;= score_num &lt; </span><span class="s3">100</span><span class="s1">:</span>
+                <span class="s1">num_of_enemies = </span><span class="s3">8</span>
+            <span class="s0">if </span><span class="s1">score_num == </span><span class="s3">100</span><span class="s1">:</span>
+                <span class="s0">for </span><span class="s1">j </span><span class="s0">in </span><span class="s1">range(num_of_enemies):</span>
+                    <span class="s1">enemyY[j] = </span><span class="s3">1000</span>
+                <span class="s1">you_win_msg()</span>
+                <span class="s0">break</span>
+            <span class="s0">if </span><span class="s1">lives &gt;= end_lives:</span>
+                <span class="s0">if </span><span class="s3">435 </span><span class="s1">&lt; enemyY[i] &lt; </span><span class="s3">900</span><span class="s1">:</span>
+                    <span class="s1">enemyY[i] = </span><span class="s3">1000</span>
+                    <span class="s1">lives -= </span><span class="s3">1</span>
+                    <span class="s0">if </span><span class="s1">score_num &gt; </span><span class="s3">0</span><span class="s1">:</span>
+                        <span class="s1">score_num -= </span><span class="s3">1</span>
+            <span class="s0">if </span><span class="s1">lives == end_lives:</span>
+                <span class="s0">for </span><span class="s1">j </span><span class="s0">in </span><span class="s1">range(num_of_enemies):</span>
+                    <span class="s1">enemyY[j] = </span><span class="s3">1000</span>
+                <span class="s1">game_over()</span>
+                <span class="s0">break</span>
+
+        <span class="s0">if </span><span class="s1">bulletY &lt;= </span><span class="s3">0</span><span class="s1">:</span>
+            <span class="s1">bulletY = </span><span class="s3">480</span>
+            <span class="s1">bullet_state = </span><span class="s2">&quot;ready&quot;</span>
+
+        <span class="s0">if </span><span class="s1">bullet_state </span><span class="s0">is </span><span class="s2">&quot;fire&quot;</span><span class="s1">:</span>
+            <span class="s1">bullet_state = </span><span class="s2">&quot;fire&quot;</span>
+            <span class="s1">windowScreen.blit(bulletImg</span><span class="s0">, </span><span class="s1">(bulletX + </span><span class="s3">15</span><span class="s0">, </span><span class="s1">bulletY))</span>
+            <span class="s1">bulletY -= bulletY_change</span>
+
+        <span class="s1">draw_line()</span>
+        <span class="s1">player()</span>
+        <span class="s1">show_score()</span>
+        <span class="s1">show_score_to_win()</span>
+        <span class="s1">show_lives()</span>
+        <span class="s1">pygame.display.update()</span>
+
+
+<span class="s1">intro_screen()</span>
+
+
+</pre>
+</body>
+</html>

@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to left,
+    rgb(115, 212, 206),
+    rgba(24, 94, 233, 0.816)
+  );
+}
+
+.calculator {
+  flex: 0 0 40%;
+}
+
+.screen {
+  width: 100%;
+  font-size: 3rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.85);
+  color: white;
+  border: none;
+  padding-top: 200px;
+  outline: none;
+  resize: both;
+  overflow: auto;
+  border: 1px solid;
+}
+
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+button {
+  flex: 0 0 25%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: 1px solid;
+  padding: 1.5rem 0;
+  outline: none;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.btn-drkgrey:hover {
+  background: orange;
+}
+
+.btn-equal:hover {
+  background: blue;
+}
+
+.btn-clear:hover {
+  background: red;
+}
+
+.btn-orange:hover {
+  background: rgb(255, 102, 0);
+}
+
+.btn,
+.btn-equal,
+.btn-clear {
+  font-size: 1.5rem;
+}
+
+.btn-clear {
+  width: 100%;
+}
+
+#info-btn {
+  font-size: 1.5rem;
+  background: green;
+}
+
+#info-btn:hover {
+  background: indigo;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  font-size: 1.5rem;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  max-width: 50%;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#sqrt {
+  flex: 0 0 25%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: 1px solid;
+  padding: 0.25rem 0;
+  outline: none;
+  font-size: 1.5rem;
+}
+
+#sqrt:hover {
+  background: rgb(255, 102, 0);
+}
+
+@media screen and (max-width: 768px) {
+  .screen {
+    font-size: 1.5rem;
+    height: 100px;
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+
+  .calculator {
+    flex: 0 0 80%;
+  }
+
+  button {
+    flex: 0 0 25%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 1px solid;
+    padding: 0.5rem 0;
+    outline: none;
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    max-width: 90%;
+  }
+}

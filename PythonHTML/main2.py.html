@@ -1,0 +1,357 @@
+<html>
+<head>
+<title>newmain.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6897bb;}
+.s3 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+newmain.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">pygame</span>
+<span class="s0">from </span><span class="s1">sys </span><span class="s0">import </span><span class="s1">exit</span>
+<span class="s0">import </span><span class="s1">random</span>
+
+
+<span class="s0">def </span><span class="s1">start_screen():</span>
+    <span class="s1">pygame.init()</span>
+    <span class="s1">begin_screen = pygame.display.set_mode((</span><span class="s2">800</span><span class="s0">, </span><span class="s2">600</span><span class="s1">))</span>
+    <span class="s1">intro_font = pygame.font.SysFont(</span><span class="s3">&quot;arial&quot;</span><span class="s0">, </span><span class="s2">36</span><span class="s1">)</span>
+
+    <span class="s1">intro_message_1 = intro_font.render(</span><span class="s3">&quot;REACTION SPEED GAME&quot;</span><span class="s0">, True, </span><span class="s1">(</span><span class="s2">0</span><span class="s0">, </span><span class="s2">255</span><span class="s0">, </span><span class="s2">255</span><span class="s1">))</span>
+    <span class="s1">begin_screen.blit(intro_message_1</span><span class="s0">, </span><span class="s1">[</span><span class="s2">800 </span><span class="s1">/ </span><span class="s2">2 </span><span class="s1">- intro_message_1.get_width() / </span><span class="s2">2</span><span class="s0">, </span><span class="s2">10</span><span class="s1">])</span>
+
+    <span class="s1">intro_message_2 = intro_font.render(</span><span class="s3">&quot;Avoid falling blue rectangles and red lasers&quot;</span><span class="s0">, True, </span><span class="s1">(</span><span class="s2">255</span><span class="s0">, </span><span class="s2">0</span><span class="s0">, </span><span class="s2">0</span><span class="s1">))</span>
+    <span class="s1">begin_screen.blit(intro_message_2</span><span class="s0">, </span><span class="s1">[</span><span class="s2">800 </span><span class="s1">/ </span><span class="s2">2 </span><span class="s1">- intro_message_2.get_width() / </span><span class="s2">2</span><span class="s0">, </span><span class="s2">100</span><span class="s1">])</span>
+
+    <span class="s1">intro_message_3 = intro_font.render(</span><span class="s3">&quot;Left arrow key =&gt; move Left&quot;</span><span class="s0">, True, </span><span class="s1">(</span><span class="s2">255</span><span class="s0">, </span><span class="s2">255</span><span class="s0">, </span><span class="s2">255</span><span class="s1">))</span>
+    <span class="s1">begin_screen.blit(intro_message_3</span><span class="s0">, </span><span class="s1">[</span><span class="s2">800 </span><span class="s1">/ </span><span class="s2">2 </span><span class="s1">- intro_message_3.get_width() / </span><span class="s2">2</span><span class="s0">, </span><span class="s2">200</span><span class="s1">])</span>
+
+    <span class="s1">intro_message_4 = intro_font.render(</span><span class="s3">&quot;Right arrow key =&gt; move Right&quot;</span><span class="s0">, True, </span><span class="s1">(</span><span class="s2">255</span><span class="s0">, </span><span class="s2">255</span><span class="s0">, </span><span class="s2">255</span><span class="s1">))</span>
+    <span class="s1">begin_screen.blit(intro_message_4</span><span class="s0">, </span><span class="s1">[</span><span class="s2">800 </span><span class="s1">/ </span><span class="s2">2 </span><span class="s1">- intro_message_4.get_width() / </span><span class="s2">2</span><span class="s0">, </span><span class="s2">300</span><span class="s1">])</span>
+
+    <span class="s1">intro_message_5 = intro_font.render(</span><span class="s3">&quot;Spacebar =&gt; Jump&quot;</span><span class="s0">, True, </span><span class="s1">(</span><span class="s2">255</span><span class="s0">, </span><span class="s2">255</span><span class="s0">, </span><span class="s2">255</span><span class="s1">))</span>
+    <span class="s1">begin_screen.blit(intro_message_5</span><span class="s0">, </span><span class="s1">[</span><span class="s2">800 </span><span class="s1">/ </span><span class="s2">2 </span><span class="s1">- intro_message_5.get_width() / </span><span class="s2">2</span><span class="s0">, </span><span class="s2">400</span><span class="s1">])</span>
+
+    <span class="s1">intro_message_6 = intro_font.render(</span><span class="s3">&quot;Press spacebar to start game&quot;</span><span class="s0">, True, </span><span class="s1">(</span><span class="s2">255</span><span class="s0">, </span><span class="s2">255</span><span class="s0">, </span><span class="s2">255</span><span class="s1">))</span>
+    <span class="s1">begin_screen.blit(intro_message_6</span><span class="s0">, </span><span class="s1">[</span><span class="s2">800 </span><span class="s1">/ </span><span class="s2">2 </span><span class="s1">- intro_message_6.get_width() / </span><span class="s2">2</span><span class="s0">, </span><span class="s2">500</span><span class="s1">])</span>
+
+    <span class="s1">intro_screen = </span><span class="s0">True</span>
+
+    <span class="s0">while </span><span class="s1">intro_screen:</span>
+
+        <span class="s0">for </span><span class="s1">event </span><span class="s0">in </span><span class="s1">pygame.event.get():</span>
+            <span class="s0">if </span><span class="s1">event.type == pygame.QUIT:</span>
+                <span class="s1">intro_screen = </span><span class="s0">False</span>
+                <span class="s1">exit()</span>
+
+            <span class="s0">if </span><span class="s1">event.type == pygame.KEYDOWN:</span>
+                <span class="s0">if </span><span class="s1">event.key == pygame.K_SPACE:</span>
+                    <span class="s1">main()</span>
+
+        <span class="s1">pygame.display.update()</span>
+
+
+<span class="s0">def </span><span class="s1">display_instructions(screen):</span>
+    <span class="s1">display_font = pygame.font.SysFont(</span><span class="s3">&quot;arial&quot;</span><span class="s0">, </span><span class="s2">21</span><span class="s1">)</span>
+
+    <span class="s1">display_message_1 = display_font.render(</span><span class="s3">&quot;F - Pause game for instructions&quot;</span><span class="s0">, True, </span><span class="s1">(</span><span class="s2">255</span><span class="s0">, </span><span class="s2">255</span><span class="s0">, </span><span class="s2">255</span><span class="s1">))</span>
+    <span class="s1">screen.blit(display_message_1</span><span class="s0">, </span><span class="s1">(</span><span class="s2">10</span><span class="s0">, </span><span class="s2">10</span><span class="s1">))</span>
+
+    <span class="s1">display_message_2 = display_font.render(</span><span class="s3">&quot;C - Resume playing&quot;</span><span class="s0">, True, </span><span class="s1">(</span><span class="s2">255</span><span class="s0">, </span><span class="s2">255</span><span class="s0">, </span><span class="s2">255</span><span class="s1">))</span>
+    <span class="s1">screen.blit(display_message_2</span><span class="s0">, </span><span class="s1">(</span><span class="s2">10</span><span class="s0">, </span><span class="s2">40</span><span class="s1">))</span>
+
+    <span class="s1">display_message_2 = display_font.render(</span><span class="s3">&quot;ESC - Exit game &quot;</span><span class="s0">, True, </span><span class="s1">(</span><span class="s2">255</span><span class="s0">, </span><span class="s2">255</span><span class="s0">, </span><span class="s2">255</span><span class="s1">))</span>
+    <span class="s1">screen.blit(display_message_2</span><span class="s0">, </span><span class="s1">(</span><span class="s2">10</span><span class="s0">, </span><span class="s2">70</span><span class="s1">))</span>
+
+
+<span class="s0">def </span><span class="s1">display_waves(screen</span><span class="s0">, </span><span class="s1">wave_num):</span>
+    <span class="s1">wave_font = pygame.font.SysFont(</span><span class="s3">&quot;arial&quot;</span><span class="s0">, </span><span class="s2">21</span><span class="s1">)</span>
+
+    <span class="s1">waves_survived = wave_font.render(</span><span class="s3">&quot;Waves Survived: &quot; </span><span class="s1">+ str(wave_num)</span><span class="s0">, True, </span><span class="s1">(</span><span class="s2">0</span><span class="s0">, </span><span class="s2">255</span><span class="s0">, </span><span class="s2">255</span><span class="s1">))</span>
+    <span class="s1">screen.blit(waves_survived</span><span class="s0">, </span><span class="s1">[</span><span class="s2">1000 </span><span class="s1">/ </span><span class="s2">2 </span><span class="s1">- waves_survived.get_width() / </span><span class="s2">2</span><span class="s0">, </span><span class="s2">10</span><span class="s1">])</span>
+
+
+<span class="s0">def </span><span class="s1">is_collision(character</span><span class="s0">, </span><span class="s1">enemy):</span>
+    <span class="s0">if </span><span class="s1">character.colliderect(enemy):</span>
+        <span class="s0">return True</span>
+    <span class="s0">else</span><span class="s1">:</span>
+        <span class="s0">return False</span>
+
+
+<span class="s0">def </span><span class="s1">collision_ground(ground</span><span class="s0">, </span><span class="s1">enemy):</span>
+    <span class="s0">if </span><span class="s1">ground.colliderect(enemy):</span>
+        <span class="s0">return True</span>
+    <span class="s0">else</span><span class="s1">:</span>
+        <span class="s0">return False</span>
+
+
+<span class="s0">def </span><span class="s1">game_over(screen</span><span class="s0">, </span><span class="s1">font):</span>
+    <span class="s1">screen.fill((</span><span class="s2">0</span><span class="s0">, </span><span class="s2">0</span><span class="s0">, </span><span class="s2">0</span><span class="s1">))</span>
+    <span class="s1">lose_message = font.render(</span><span class="s3">&quot;GAME OVER, press R to restart or ESC to exit&quot;</span><span class="s0">, True, </span><span class="s1">(</span><span class="s2">255</span><span class="s0">, </span><span class="s2">255</span><span class="s0">, </span><span class="s2">255</span><span class="s1">))</span>
+    <span class="s1">screen.blit(lose_message</span><span class="s0">, </span><span class="s1">[</span><span class="s2">800 </span><span class="s1">/ </span><span class="s2">2 </span><span class="s1">- lose_message.get_width() / </span><span class="s2">2</span><span class="s0">, </span><span class="s2">275</span><span class="s1">])</span>
+
+
+<span class="s0">def </span><span class="s1">main():</span>
+    <span class="s1">char_x = </span><span class="s2">440</span>
+    <span class="s1">char_y = </span><span class="s2">500</span>
+    <span class="s1">char_width = </span><span class="s2">25</span>
+    <span class="s1">char_height = </span><span class="s2">25</span>
+    <span class="s1">char_y_change = </span><span class="s2">0</span>
+    <span class="s1">char_x_change = </span><span class="s2">0</span>
+    <span class="s1">y_grav = </span><span class="s2">6</span>
+
+    <span class="s1">wave_num = </span><span class="s2">0</span>
+
+    <span class="s1">info_msg = </span><span class="s0">False</span>
+    <span class="s1">collide_laser = </span><span class="s0">False</span>
+    <span class="s1">collide_enemy = </span><span class="s0">False</span>
+    <span class="s1">collision_enemy_ground = </span><span class="s0">False</span>
+    <span class="s1">laser_moving_left = </span><span class="s0">False</span>
+    <span class="s1">laser_moving_right = </span><span class="s0">False</span>
+    <span class="s1">laser_2_moving_right = </span><span class="s0">False</span>
+    <span class="s1">laser_2_moving_left = </span><span class="s0">False</span>
+    <span class="s1">stop_enemy_movement = </span><span class="s0">False</span>
+    <span class="s1">char_stop_movement = </span><span class="s0">False</span>
+
+    <span class="s1">ground_x = </span><span class="s2">0</span>
+    <span class="s1">ground_y = </span><span class="s2">575</span>
+    <span class="s1">ground_width = </span><span class="s2">800</span>
+    <span class="s1">ground_height = </span><span class="s2">25</span>
+
+    <span class="s1">laser_x = </span><span class="s2">0</span>
+    <span class="s1">laser_x_change = </span><span class="s2">0</span>
+    <span class="s1">laser_y = </span><span class="s2">575</span>
+    <span class="s1">laser_width = </span><span class="s2">10</span>
+    <span class="s1">laser_height = -</span><span class="s2">100</span>
+
+    <span class="s1">laser_2_x = </span><span class="s2">790</span>
+    <span class="s1">laser_2_x_change = </span><span class="s2">0</span>
+    <span class="s1">laser_2_y = </span><span class="s2">575</span>
+    <span class="s1">laser_2_width = </span><span class="s2">10</span>
+    <span class="s1">laser_2_height = -</span><span class="s2">100</span>
+
+    <span class="s1">clock = pygame.time.Clock()</span>
+
+    <span class="s1">pygame.init()</span>
+
+    <span class="s1">screen = pygame.display.set_mode((</span><span class="s2">800</span><span class="s0">, </span><span class="s2">600</span><span class="s1">))</span>
+
+    <span class="s1">color_red = (</span><span class="s2">255</span><span class="s0">, </span><span class="s2">0</span><span class="s0">, </span><span class="s2">0</span><span class="s1">)</span>
+    <span class="s1">color_blue = (</span><span class="s2">0</span><span class="s0">, </span><span class="s2">0</span><span class="s0">, </span><span class="s2">255</span><span class="s1">)</span>
+    <span class="s1">color_char = (</span><span class="s2">123</span><span class="s0">, </span><span class="s2">44</span><span class="s0">, </span><span class="s2">58</span><span class="s1">)</span>
+
+    <span class="s1">num_of_enemies = </span><span class="s2">12</span>
+    <span class="s1">enemy_x = []</span>
+    <span class="s1">enemy_y = []</span>
+    <span class="s1">enemy_y_change = []</span>
+
+    <span class="s0">for </span><span class="s1">i </span><span class="s0">in </span><span class="s1">range(num_of_enemies):</span>
+        <span class="s1">enemy_x.append(random.randint(</span><span class="s2">0</span><span class="s0">, </span><span class="s2">775</span><span class="s1">))</span>
+        <span class="s1">enemy_y.append(random.randint(</span><span class="s2">0</span><span class="s0">, </span><span class="s2">0</span><span class="s1">))</span>
+        <span class="s1">enemy_y_change.append(</span><span class="s2">6</span><span class="s1">)</span>
+        <span class="s1">num_of_enemies = num_of_enemies</span>
+
+    <span class="s1">isJump = </span><span class="s0">False</span>
+    <span class="s1">jumpCount = </span><span class="s2">10</span>
+
+    <span class="s1">run = </span><span class="s0">True</span>
+
+    <span class="s0">while </span><span class="s1">run:</span>
+
+        <span class="s1">screen.fill((</span><span class="s2">0</span><span class="s0">, </span><span class="s2">0</span><span class="s0">, </span><span class="s2">0</span><span class="s1">))</span>
+
+        <span class="s1">font = pygame.font.SysFont(</span><span class="s3">&quot;arial&quot;</span><span class="s0">, </span><span class="s2">30</span><span class="s1">)</span>
+
+        <span class="s1">display_instructions(screen)</span>
+
+        <span class="s1">display_waves(screen</span><span class="s0">, </span><span class="s1">wave_num)</span>
+
+        <span class="s1">character = pygame.draw.rect(screen</span><span class="s0">, </span><span class="s1">color_char</span><span class="s0">, </span><span class="s1">(char_x</span><span class="s0">, </span><span class="s1">char_y</span><span class="s0">, </span><span class="s1">char_width</span><span class="s0">, </span><span class="s1">char_height))</span>
+        <span class="s1">ground = pygame.draw.rect(screen</span><span class="s0">, </span><span class="s1">(</span><span class="s2">100</span><span class="s0">, </span><span class="s2">111</span><span class="s0">, </span><span class="s2">125</span><span class="s1">)</span><span class="s0">, </span><span class="s1">(ground_x</span><span class="s0">, </span><span class="s1">ground_y</span><span class="s0">, </span><span class="s1">ground_width</span><span class="s0">, </span><span class="s1">ground_height))</span>
+        <span class="s1">laser = pygame.draw.rect(screen</span><span class="s0">, </span><span class="s1">color_red</span><span class="s0">, </span><span class="s1">(laser_x</span><span class="s0">, </span><span class="s1">laser_y</span><span class="s0">, </span><span class="s1">laser_width</span><span class="s0">, </span><span class="s1">laser_height))</span>
+        <span class="s1">laser_2 = pygame.draw.rect(screen</span><span class="s0">, </span><span class="s1">color_red</span><span class="s0">, </span><span class="s1">(laser_2_x</span><span class="s0">, </span><span class="s1">laser_2_y</span><span class="s0">, </span><span class="s1">laser_2_width</span><span class="s0">, </span><span class="s1">laser_2_height))</span>
+
+        <span class="s1">char_y += y_grav</span>
+        <span class="s1">laser_x += laser_x_change</span>
+        <span class="s1">laser_2_x += laser_2_x_change</span>
+
+        <span class="s0">for </span><span class="s1">i </span><span class="s0">in </span><span class="s1">range(num_of_enemies):</span>
+            <span class="s1">enemy = pygame.draw.rect(screen</span><span class="s0">, </span><span class="s1">color_blue</span><span class="s0">, </span><span class="s1">(enemy_x[i]</span><span class="s0">, </span><span class="s1">enemy_y[i]</span><span class="s0">, </span><span class="s2">25</span><span class="s0">, </span><span class="s2">25</span><span class="s1">))</span>
+            <span class="s1">enemy_y[i] += enemy_y_change[i]</span>
+
+            <span class="s0">if </span><span class="s1">stop_enemy_movement:</span>
+                <span class="s1">enemy_y_change[i] = </span><span class="s2">0</span>
+
+            <span class="s0">if not </span><span class="s1">stop_enemy_movement:</span>
+                <span class="s1">enemy_y_change[i] = </span><span class="s2">6</span>
+
+            <span class="s1">collision = is_collision(character</span><span class="s0">, </span><span class="s1">enemy)</span>
+
+            <span class="s0">if </span><span class="s1">collision:</span>
+                <span class="s1">collide_enemy = </span><span class="s0">True</span>
+
+            <span class="s0">if </span><span class="s1">collide_enemy:</span>
+                <span class="s1">game_over(screen</span><span class="s0">, </span><span class="s1">font)</span>
+                <span class="s1">info_msg = </span><span class="s0">False</span>
+
+            <span class="s0">if </span><span class="s1">ground.colliderect(enemy):</span>
+                <span class="s1">enemy_y[i] = </span><span class="s2">0</span>
+                <span class="s1">enemy_x[i] = random.randint(</span><span class="s2">0</span><span class="s0">, </span><span class="s2">775</span><span class="s1">)</span>
+
+            <span class="s0">if </span><span class="s1">collision_ground(ground</span><span class="s0">, </span><span class="s1">enemy):</span>
+                <span class="s1">collision_enemy_ground = </span><span class="s0">True</span>
+
+        <span class="s0">if </span><span class="s1">collision_enemy_ground:</span>
+            <span class="s1">wave_num += </span><span class="s2">1</span>
+            <span class="s1">collision_enemy_ground = </span><span class="s0">False</span>
+
+        <span class="s0">if </span><span class="s1">char_y &gt;= </span><span class="s2">550</span><span class="s1">:</span>
+            <span class="s1">char_y = </span><span class="s2">550</span>
+        <span class="s0">if </span><span class="s1">char_y &lt;= </span><span class="s2">10</span><span class="s1">:</span>
+            <span class="s1">char_y = </span><span class="s2">10</span>
+
+        <span class="s0">if </span><span class="s1">character.colliderect(laser) </span><span class="s0">or </span><span class="s1">character.colliderect(laser_2):</span>
+            <span class="s1">collide_laser = </span><span class="s0">True</span>
+
+        <span class="s0">if </span><span class="s1">collide_laser:</span>
+            <span class="s1">game_over(screen</span><span class="s0">, </span><span class="s1">font)</span>
+            <span class="s1">info_msg = </span><span class="s0">False</span>
+
+        <span class="s0">if </span><span class="s1">char_x &gt;= </span><span class="s2">800 </span><span class="s1">- char_width:</span>
+            <span class="s1">char_x = </span><span class="s2">800 </span><span class="s1">- char_width</span>
+        <span class="s0">if </span><span class="s1">char_x &lt;= </span><span class="s2">0</span><span class="s1">:</span>
+            <span class="s1">char_x = </span><span class="s2">0</span>
+
+        <span class="s0">if </span><span class="s1">laser_x &gt;= </span><span class="s2">800 </span><span class="s1">- laser_width:</span>
+            <span class="s1">laser_x_change = -</span><span class="s2">2</span>
+        <span class="s0">if </span><span class="s1">laser_x &lt;= </span><span class="s2">0</span><span class="s1">:</span>
+            <span class="s1">laser_x_change = </span><span class="s2">2</span>
+
+        <span class="s0">if </span><span class="s1">laser_2_x &gt;= </span><span class="s2">800 </span><span class="s1">- laser_2_width:</span>
+            <span class="s1">laser_2_x_change = -</span><span class="s2">2</span>
+        <span class="s0">if </span><span class="s1">laser_2_x &lt;= </span><span class="s2">0</span><span class="s1">:</span>
+            <span class="s1">laser_2_x_change = </span><span class="s2">2</span>
+
+        <span class="s0">if </span><span class="s1">info_msg:</span>
+            <span class="s1">info_message_1 = font.render(</span><span class="s3">&quot;Left and Right arrow keys to move&quot;</span><span class="s0">, True, </span><span class="s1">(</span><span class="s2">255</span><span class="s0">, </span><span class="s2">255</span><span class="s0">, </span><span class="s2">255</span><span class="s1">))</span>
+            <span class="s1">info_message_2 = font.render(</span><span class="s3">&quot;Spacebar to jump&quot;</span><span class="s0">, True, </span><span class="s1">(</span><span class="s2">255</span><span class="s0">, </span><span class="s2">255</span><span class="s0">, </span><span class="s2">255</span><span class="s1">))</span>
+            <span class="s1">info_message_3 = font.render(</span><span class="s3">&quot;AVOID BLUE RECTANGLES AND RED LASERS&quot;</span><span class="s0">, True, </span><span class="s1">(</span><span class="s2">255</span><span class="s0">, </span><span class="s2">0</span><span class="s0">, </span><span class="s2">0</span><span class="s1">))</span>
+            <span class="s1">screen.blit(info_message_1</span><span class="s0">, </span><span class="s1">[</span><span class="s2">800 </span><span class="s1">/ </span><span class="s2">2 </span><span class="s1">- info_message_1.get_width() / </span><span class="s2">2</span><span class="s0">, </span><span class="s2">300</span><span class="s1">])</span>
+            <span class="s1">screen.blit(info_message_2</span><span class="s0">, </span><span class="s1">[</span><span class="s2">800 </span><span class="s1">/ </span><span class="s2">2 </span><span class="s1">- info_message_2.get_width() / </span><span class="s2">2</span><span class="s0">, </span><span class="s2">400</span><span class="s1">])</span>
+            <span class="s1">screen.blit(info_message_3</span><span class="s0">, </span><span class="s1">[</span><span class="s2">800 </span><span class="s1">/ </span><span class="s2">2 </span><span class="s1">- info_message_3.get_width() / </span><span class="s2">2</span><span class="s0">, </span><span class="s2">200</span><span class="s1">])</span>
+
+        <span class="s0">if </span><span class="s1">isJump:</span>
+            <span class="s0">if </span><span class="s1">jumpCount &gt;= -</span><span class="s2">10</span><span class="s1">:</span>
+                <span class="s1">char_y -= (jumpCount * abs(jumpCount)) * </span><span class="s2">0.5</span>
+                <span class="s1">jumpCount -= </span><span class="s2">1</span>
+            <span class="s0">else</span><span class="s1">:</span>
+                <span class="s1">jumpCount = </span><span class="s2">10</span>
+                <span class="s1">isJump = </span><span class="s0">False</span>
+
+        <span class="s0">for </span><span class="s1">event </span><span class="s0">in </span><span class="s1">pygame.event.get():</span>
+
+            <span class="s0">if </span><span class="s1">event.type == pygame.QUIT:</span>
+                <span class="s1">run = </span><span class="s0">False</span>
+                <span class="s1">exit()</span>
+
+            <span class="s0">if </span><span class="s1">event.type == pygame.KEYDOWN:</span>
+
+                <span class="s0">if </span><span class="s1">event.key == pygame.K_RIGHT </span><span class="s0">and not </span><span class="s1">char_stop_movement:</span>
+                    <span class="s1">char_x_change = </span><span class="s2">5</span>
+
+                <span class="s0">if </span><span class="s1">event.key == pygame.K_LEFT </span><span class="s0">and not </span><span class="s1">char_stop_movement:</span>
+                    <span class="s1">char_x_change = -</span><span class="s2">5</span>
+
+                <span class="s0">if </span><span class="s1">event.key == pygame.K_SPACE </span><span class="s0">and </span><span class="s1">char_y == </span><span class="s2">550 </span><span class="s0">and not </span><span class="s1">char_stop_movement:</span>
+                    <span class="s1">isJump = </span><span class="s0">True</span>
+
+                <span class="s0">if </span><span class="s1">event.key == pygame.K_f:</span>
+
+                    <span class="s1">info_msg = </span><span class="s0">True</span>
+                    <span class="s1">stop_enemy_movement = </span><span class="s0">True</span>
+                    <span class="s1">char_stop_movement = </span><span class="s0">True</span>
+
+                    <span class="s0">if </span><span class="s1">laser_x_change == </span><span class="s2">2</span><span class="s1">:</span>
+                        <span class="s1">laser_x_change = </span><span class="s2">0</span>
+                        <span class="s1">laser_moving_right = </span><span class="s0">True</span>
+                        <span class="s1">laser_moving_left = </span><span class="s0">False</span>
+
+                    <span class="s0">if </span><span class="s1">laser_x_change == -</span><span class="s2">2</span><span class="s1">:</span>
+                        <span class="s1">laser_x_change = </span><span class="s2">0</span>
+                        <span class="s1">laser_moving_left = </span><span class="s0">True</span>
+                        <span class="s1">laser_moving_right = </span><span class="s0">False</span>
+
+                    <span class="s0">if </span><span class="s1">laser_2_x_change == </span><span class="s2">2</span><span class="s1">:</span>
+                        <span class="s1">laser_2_x_change = </span><span class="s2">0</span>
+                        <span class="s1">laser_2_moving_right = </span><span class="s0">True</span>
+                        <span class="s1">laser_2_moving_left = </span><span class="s0">False</span>
+
+                    <span class="s0">if </span><span class="s1">laser_2_x_change == -</span><span class="s2">2</span><span class="s1">:</span>
+                        <span class="s1">laser_2_x_change = </span><span class="s2">0</span>
+                        <span class="s1">laser_2_moving_left = </span><span class="s0">True</span>
+                        <span class="s1">laser_2_moving_right = </span><span class="s0">False</span>
+
+                <span class="s0">if </span><span class="s1">event.key == pygame.K_c </span><span class="s0">and </span><span class="s1">info_msg:</span>
+
+                    <span class="s1">info_msg = </span><span class="s0">False</span>
+                    <span class="s1">stop_enemy_movement = </span><span class="s0">False</span>
+                    <span class="s1">char_stop_movement = </span><span class="s0">False</span>
+
+                    <span class="s0">if </span><span class="s1">char_y &lt; </span><span class="s2">550</span><span class="s1">:</span>
+                        <span class="s1">isJump = </span><span class="s0">True</span>
+
+                    <span class="s1">y_grav = </span><span class="s2">6</span>
+
+                    <span class="s0">if </span><span class="s1">laser_moving_right:</span>
+                        <span class="s1">laser_x_change = </span><span class="s2">2</span>
+
+                    <span class="s0">if </span><span class="s1">laser_moving_left:</span>
+                        <span class="s1">laser_x_change = -</span><span class="s2">2</span>
+
+                    <span class="s0">if </span><span class="s1">laser_2_moving_right:</span>
+                        <span class="s1">laser_2_x_change = </span><span class="s2">2</span>
+
+                    <span class="s0">if </span><span class="s1">laser_2_moving_left:</span>
+                        <span class="s1">laser_2_x_change = -</span><span class="s2">2</span>
+
+                <span class="s0">if </span><span class="s1">event.key == pygame.K_r:</span>
+                    <span class="s1">main()</span>
+
+                <span class="s0">if </span><span class="s1">event.key == pygame.K_ESCAPE:</span>
+                    <span class="s1">pygame.quit()</span>
+                    <span class="s1">exit()</span>
+
+            <span class="s0">if </span><span class="s1">event.type == pygame.KEYUP:</span>
+
+                <span class="s0">if </span><span class="s1">event.key == pygame.K_RIGHT:</span>
+                    <span class="s0">if </span><span class="s1">char_x_change &gt; </span><span class="s2">0</span><span class="s1">:</span>
+                        <span class="s1">char_x_change = </span><span class="s2">0</span>
+                <span class="s0">if </span><span class="s1">event.key == pygame.K_LEFT:</span>
+                    <span class="s0">if </span><span class="s1">char_x_change &lt; </span><span class="s2">0</span><span class="s1">:</span>
+                        <span class="s1">char_x_change = </span><span class="s2">0</span>
+
+        <span class="s0">if </span><span class="s1">char_stop_movement:</span>
+            <span class="s1">char_x_change = </span><span class="s2">0</span>
+            <span class="s1">char_y_change = </span><span class="s2">0</span>
+            <span class="s1">isJump = </span><span class="s0">False</span>
+            <span class="s1">y_grav = </span><span class="s2">0</span>
+
+        <span class="s1">char_x += char_x_change</span>
+        <span class="s1">char_y += char_y_change</span>
+
+        <span class="s1">pygame.display.update()</span>
+        <span class="s1">clock.tick(</span><span class="s2">60</span><span class="s1">)</span>
+
+
+<span class="s1">start_screen()</span>
+</pre>
+</body>
+</html>
