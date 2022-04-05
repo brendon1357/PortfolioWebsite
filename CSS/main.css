@@ -321,6 +321,11 @@ h1 {
   margin: auto;
 }
 
+.customContainerVideo{
+  max-width: 55rem;
+  margin:auto;
+}
+
 .changetextcolour {
   text-align: center;
   color: white;
@@ -428,12 +433,6 @@ textarea:focus {
 
 #addmarginforcardblock{
   margin-top: 0px;
-}
-
-i:hover {
-  color: #0a0a0a;
-  transition: 0.4s;
-  cursor: pointer;
 }
 
 @media screen and (max-width: 1000px) {
