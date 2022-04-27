@@ -24,6 +24,10 @@ body, html {
   padding-top: 80px;
 }
 
+.projectdisplay .container {
+  max-width: 1400px;
+}
+
 #jumptocontact {
   margin-top: -80px;
   padding-top: 80px;
