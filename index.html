@@ -2,8 +2,8 @@
 <html lang="en">
    <head>
       <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
       <title>Portfolio Home</title>
       <link rel="apple-touch-icon" sizes="180x180" href="/FaviconPackage/apple-touch-icon.png">
       <link rel="icon" type="image/png" sizes="32x32" href="/FaviconPackage/favicon-32x32.png">
@@ -60,9 +60,9 @@
                      <div class="dropdown-menu" aria-labelledby="navbarDropdown" data-target=".navbar-collapse.show">
                         <a class="dropdown-item" href="#jumptofeatured">Featured</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#jumptopersonal">Personal</a>
-                        <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#jumptoprojects">For Fun</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#jumptopersonal">Personal</a>
                   </li>
                   </li>
                   <li class="nav-item">
@@ -88,10 +88,10 @@
             <div></div>
          </div>
       </div>
-      <div id="jumptoabout"></div>
       <div class="aboutsection">
          <div class="container">
-            <h1 style="margin-top: 70px;">About Me</h1>
+            <div style="margin-top: 70px;"></div>
+            <h1 id="jumptoabout">About Me</h1>
             <div class="row justify-content-center">
                <div class="col-sm-12 col-md-10 col-lg-10">
                   <p class="lead">My name is Brendon and I am a 22 year old Memorial University of Newfoundland senior Computer Science student. So far, I have completed one workterm related to my education. My work term was
@@ -106,8 +106,8 @@
          <div class="worklink">
             <span><a href="https://www.linkedin.com/in/brendon-thorne-70b290195/" target="_blank">LinkedIn Page</a></span> 
          </div>
-         <div class="skillsection" id="jumptoskills">
-            <h1>Skills</h1>
+         <div class="skillsection">
+            <h1 id="jumptoskills">Skills</h1>
             <div class="container-fluid mt-3">
                <div class="row justify-content-center">
                   <div class="col-auto mb-3">
@@ -145,9 +145,9 @@
          </div>
       </div>
       <div style="background-color: #29323f;">
-         <div id="jumptofeatured"></div>
-         <div class="customContainer">
-            <h1 style="margin-top:70px; margin-bottom:15px; padding-top:75px; color: white;">Featured Project</h1>
+         <div class="container">
+            <div style="margin-top:70px; margin-bottom:15px; padding-top:40px;"></div>
+            <h1 style="color: white;" id="jumptofeatured">Featured Project</h1>
             <div class="card mx-auto" style="max-width: 55rem;">
                <img class="card-img-top" src="Images/Kingdomino.png" alt="Card image cap">
                <div class="card-body">
@@ -165,7 +165,7 @@
             </div>
          </div>
          <div style="padding-top:75px;"></div>
-         <div class="customContainer">
+         <div class="container">
             <div class="card mx-auto" style="max-width: 55rem;">
                <div class="embed-responsive embed-responsive-16by9">
                   <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/SAC4lelmnvo;&autoplay=1&mute=1" allowfullscreen></iframe>
@@ -174,125 +174,141 @@
          </div>
          <div style="padding-top:100px;"></div>
       </div>
-      <div id="jumptoprojects"></div>
       <div class="projectdisplay">
-      <h1 style="margin-top:70px; margin-bottom:15px;">Projects For Fun</h1>
-      <div class="customContainer">
-         <div class="card-deck">
-            <div class="card">
-               <img class="card-img-top" src="Images/Reaction.png" alt="Card image cap">
-               <div class="card-body">
-                  <h5 class="card-title">Reaction Speed Game</h5>
-                  <p class="card-text">The objective of this game is to avoid any falling blue rectangles and the two alternating red lasers. 
-                     Test your reaction speed and try to survive as many waves as you can. Built using Python and Pygame.
-                  </p>
-               </div>
-               <div class="card-footer">
-                  <a href="reactionspeed.html" target="_blank" class="btn btn-primary" style="margin-right:50px;">Click For Details</a>
-               </div>
-            </div>
-            <div class="card" id="addmarginforcardblock">
-               <img class="card-img-top" src="Images/DecoderPictureUPDATED.png" alt="Card image cap">
-               <div class="card-body">
-                  <h5 class="card-title">Password Decoder/Encoder</h5>
-                  <p class="card-text">A simple GUI that allows any user to generate a randomized password that can then be encoded and decoded later whenever necessary. 
-                     Implements a local database. Built using Python and the Tkinter library.
-                  </p>
-               </div>
-               <div class="card-footer">
-                  <a href="decoder.html" target="_blank" class="btn btn-primary" style="margin-right:50px;">Click For Details</a>
+      <div style="margin-bottom:60px;"></div>
+      <h1 id="jumptoprojects">Projects For Fun</h1>
+      <div style="margin-bottom:15px;"></div>
+      <div class="container">
+         <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6 d-flex align-self-stretch mb-5">
+               <div class="card">
+                  <img class="card-img-top" src="Images/Reaction.png" alt="Card image cap">
+                  <div class="card-body">
+                     <h5 class="card-title">Reaction Speed Game</h5>
+                     <p class="card-text">The objective of this game is to avoid any falling blue rectangles and the two alternating red lasers. 
+                        Test your reaction speed and try to survive as many waves as you can. Built using Python and Pygame.
+                     </p>
+                  </div>
+                  <div class="card-footer">
+                     <a href="reactionspeed.html" target="_blank" class="btn btn-primary" style="margin-right:50px;">Click For Details</a>
+                  </div>
                </div>
             </div>
-         </div>
-         <div class="card-deck">
-            <div class="card" id="addmarginforcard">
-               <img class="card-img-top" src="Images/Calculator.png" alt="Card image cap">
-               <div class="card-body">
-                  <h5 class="card-title">Javascript Calculator</h5>
-                  <p class="card-text">I created a basic calculator capable of performing addition, subtraction, multiplication, division, and square root operations. 
-                     It was built entirely with vanilla JavaScript, HTML5, and CSS3.
-                  </p>
-               </div>
-               <div class="card-footer">
-                  <a href="javascriptcalculator.html" target="_blank" class="btn btn-primary" style="margin-right:50px;">Click For Details</a>
-               </div>
-            </div>
-            <div class="card" id="addmarginforcard">
-               <img class="card-img-top" src="Images/Space.png" alt="Card image cap">
-               <div class="card-body">
-                  <h5 class="card-title">Space Invaders Inspired Game</h5>
-                  <p class="card-text">A game that was largely inspired from the original Space Invaders game. 
-                     The game was created using Python and the Python game library Pygame. Click the link below to learn more.
-                  </p>
-               </div>
-               <div class="card-footer">
-                  <a href="Executable.html" target="_blank" class="btn btn-primary" style="margin-right:50px;">Click For Details</a>
+            <div class="col-sm-12 col-md-6 col-lg-6 d-flex align-self-stretch mb-5">
+               <div class="card">
+                  <img class="card-img-top" src="Images/DecoderPictureUPDATED.png" alt="Card image cap">
+                  <div class="card-body">
+                     <h5 class="card-title">Password Decoder/Encoder</h5>
+                     <p class="card-text">A simple GUI that allows any user to generate a randomized password that can then be encoded and decoded later whenever necessary. 
+                        Implements a local database. Built using Python and the Tkinter library.
+                     </p>
+                  </div>
+                  <div class="card-footer">
+                     <a href="decoder.html" target="_blank" class="btn btn-primary" style="margin-right:50px;">Click For Details</a>
+                  </div>
                </div>
             </div>
          </div>
-         <div class="card-deck">
-            <div class="card" id="addmarginforcard">
-               <img class="card-img-top" src="Images/Platformer.png" alt="Card image cap">
-               <div class="card-body">
-                  <h5 class="card-title">Platformer Game</h5>
-                  <p class="card-text">A platformer game that was made in Python using Pygame. The player has to jump onto 
-                     moving platforms to avoid falling, and the player has to avoid being hit by incoming fireballs.
-                  </p>
-                  <br>
-                  <p class="card-text">(Currently not available to download but can be viewed on my <a href="https://github.com/brendon1357/Platformer" target="_blank">Github</a>)</p>
-               </div>
-               <div class="card-footer">
-                  <a href="" target="_blank" class="btn btn-primary disabled" style="margin-right:50px;">Click For Details</a>
-               </div>
-            </div>
-            <div class="card" id="addmarginforcard">
-               <img class="card-img-top" src="Images/ReminderAppResized.PNG" alt="Card image cap">
-               <div class="card-body">
-                  <h5 class="card-title">Reminder Application</h5>
-                  <p class="card-text">An application that allows a user to set reminders and view them at any time. 
-                     Old reminders can be discarded by viewing them and selecting them to delete. The application was made with Java using the Swing toolkit.
-                  </p>
-                  <br>
-                  <p class="card-text">(Currently not available to download but can be viewed on my <a href="https://github.com/brendon1357/ReminderApp" target="_blank">Github</a>)</p>
-               </div>
-               <div class="card-footer">
-                  <a href="" target="_blank" class="btn btn-primary disabled" style="margin-right:50px;">Click For Details</a>
+         <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6 d-flex align-self-stretch mb-5">
+               <div class="card">
+                  <img class="card-img-top" src="Images/Calculator.png" alt="Card image cap">
+                  <div class="card-body">
+                     <h5 class="card-title">Javascript Calculator</h5>
+                     <p class="card-text">I created a basic calculator capable of performing addition, subtraction, multiplication, division, and square root operations. 
+                        It was built entirely with vanilla JavaScript, HTML5, and CSS3.
+                     </p>
+                  </div>
+                  <div class="card-footer">
+                     <a href="javascriptcalculator.html" target="_blank" class="btn btn-primary" style="margin-right:50px;">Click For Details</a>
+                  </div>
                </div>
             </div>
-         </div>
-         <div id="jumptopersonal"></div>
-         <h1 style="margin-top:70px; margin-bottom:15px;">Personal Projects</h1>
-         <div class="card-deck">
-            <div class="card">
-               <img class="card-img-top" src="Images/Voice.jpeg" alt="Card image cap">
-               <div class="card-body">
-                  <h5 class="card-title">Voice Assistant</h5>
-                  <p class="card-text"> Problem: <span style="font-weight: normal;">Wanted to find an efficient way to automate some of my repetitive tasks.</span> </p>
-                  <p class="card-text">Solution: <span style="font-weight: normal;">Created a program in Python using the Vosk speech recognition API that detects my voice and listens for specific commands. 
-                     I programmed the assistant to set reminders for me, open various websites, lock my computer, and do a few other simple tasks.</span> 
-                  </p>
-               </div>
-               <div class="card-footer">
-                  <a href="https://github.com/brendon1357/VoiceAssistant" target="_blank" class="btn btn-primary">Github Link</a>
-               </div>
-            </div>
-            <div class="card" id="addmarginforcardblock">
-               <img class="card-img-top" src="Images/Alarm.png" alt="Card image cap">
-               <div class="card-body">
-                  <h5 class="card-title">Alarm Program</h5>
-                  <p class="card-text">Problem: <span style="font-weight: normal;"> Wanted to find a more personalized and customizable approach to setting alarms/reminders.</span></p>
-                  <p class="card-text">Solution: <span style="font-weight: normal;"> Created a program where I could set a reminder, add a precedence level, and set an alarm time. 
-                     Then, using a text-to-speech assistant, the reminders would be triggered at the desired times, in order of precedence, and read aloud to me. Reminders were autonomously discarded when no longer applicable.</span>
-                  </p>
-               </div>
-               <div class="card-footer">
-                  <a href="https://github.com/brendon1357/ReminderApp" target="_blank" class="btn btn-primary">Github Link</a>
+            <div class="col-sm-12 col-md-6 col-lg-6 d-flex align-self-stretch mb-5">
+               <div class="card">
+                  <img class="card-img-top" src="Images/Space.png" alt="Card image cap">
+                  <div class="card-body">
+                     <h5 class="card-title">Space Invaders Inspired Game</h5>
+                     <p class="card-text">A game that was largely inspired from the original Space Invaders game. 
+                        The game was created using Python and the Python game library Pygame. Click the link below to learn more.
+                     </p>
+                  </div>
+                  <div class="card-footer">
+                     <a href="Executable.html" target="_blank" class="btn btn-primary" style="margin-right:50px;">Click For Details</a>
+                  </div>
                </div>
             </div>
          </div>
-         <div style="margin-top:100px;"></div>
+         <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6 d-flex align-self-stretch mb-5">
+               <div class="card">
+                  <img class="card-img-top" src="Images/Platformer.png" alt="Card image cap">
+                  <div class="card-body">
+                     <h5 class="card-title">Platformer Game</h5>
+                     <p class="card-text">A platformer game that was made in Python using Pygame. The player has to jump onto 
+                        moving platforms to avoid falling, and the player has to avoid being hit by incoming fireballs.
+                     </p>
+                     <br>
+                     <p class="card-text">(Currently not available to download but can be viewed on my <a href="https://github.com/brendon1357/Platformer" target="_blank">Github</a>)</p>
+                  </div>
+                  <div class="card-footer">
+                     <a href="" target="_blank" class="btn btn-primary disabled" style="margin-right:50px;">Click For Details</a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 d-flex align-self-stretch mb-5">
+               <div class="card">
+                  <img class="card-img-top" src="Images/ReminderAppResized.PNG" alt="Card image cap">
+                  <div class="card-body">
+                     <h5 class="card-title">Reminder Application</h5>
+                     <p class="card-text">An application that allows a user to set reminders and view them at any time. 
+                        Old reminders can be discarded by viewing them and selecting them to delete. The application was made with Java using the Swing toolkit.
+                     </p>
+                     <br>
+                     <p class="card-text">(Currently not available to download but can be viewed on my <a href="https://github.com/brendon1357/ReminderApp" target="_blank">Github</a>)</p>
+                  </div>
+                  <div class="card-footer">
+                     <a href="" target="_blank" class="btn btn-primary disabled" style="margin-right:50px;">Click For Details</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-bottom:15px;"></div>
+         <h1 id="jumptopersonal">Personal Projects</h1>
+         <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-6 d-flex align-self-stretch mb-5">
+               <div class="card">
+                  <img class="card-img-top" src="Images/Voice.jpeg" alt="Card image cap">
+                  <div class="card-body">
+                     <h5 class="card-title">Voice Assistant</h5>
+                     <p class="card-text"> Problem: <span style="font-weight: normal;">Wanted to find an efficient way to automate some of my repetitive tasks.</span> </p>
+                     <p class="card-text">Solution: <span style="font-weight: normal;">Created a program in Python using the Vosk speech recognition API that detects my voice and listens for specific commands. 
+                        I programmed the assistant to set reminders for me, open various websites, lock my computer, and do a few other simple tasks.</span> 
+                     </p>
+                  </div>
+                  <div class="card-footer">
+                     <a href="https://github.com/brendon1357/VoiceAssistant" target="_blank" class="btn btn-primary">Github Link</a>
+                  </div>
+               </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-6 d-flex align-self-stretch mb-5">
+               <div class="card">
+                  <img class="card-img-top" src="Images/Alarm.png" alt="Card image cap">
+                  <div class="card-body">
+                     <h5 class="card-title">Alarm Program</h5>
+                     <p class="card-text">Problem: <span style="font-weight: normal;"> Wanted to find a more personalized and customizable approach to setting alarms/reminders.</span></p>
+                     <p class="card-text">Solution: <span style="font-weight: normal;"> Created a program where I could set a reminder, add a precedence level, and set an alarm time. 
+                        Then, using a text-to-speech assistant, the reminders would be triggered at the desired times, in order of precedence, and read aloud to me. Reminders were autonomously discarded when no longer applicable.</span>
+                     </p>
+                  </div>
+                  <div class="card-footer">
+                     <a href="https://github.com/brendon1357/ReminderApp" target="_blank" class="btn btn-primary">Github Link</a>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <div style="margin-top:50px;"></div>
       </div>
-      <div id="jumptocontact"></div>
       <div class="contactpage">
          <div class="container">
             <form
@@ -301,7 +317,9 @@
                method="POST"
                data-netlify="true"
                >
-               <h1 class="changetextcolour" style="padding-top:15px; padding-bottom:30px;">Contact Me</h1>
+               <div style="padding-top:15px;"></div>
+               <h1 class="changetextcolour" id="jumptocontact">Contact Me</h1>
+               <div style="padding-bottom:30px;"></div>
                <p>
                   <input
                      type="text"

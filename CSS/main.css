@@ -1,7 +1,32 @@
 body, html {
   height: 100%;
+  width: 100%;
   margin: 0;
-  padding: 0; 
+}
+
+#jumptoabout {
+  margin-top: -80px;
+  padding-top: 80px;
+}
+
+#jumptofeatured {
+  margin-top: -80px;
+  padding-top: 80px;
+}
+
+#jumptoprojects {
+  margin-top: -80px;
+  padding-top: 80px;
+}
+
+#jumptopersonal {
+  margin-top: -80px;
+  padding-top: 80px;
+}
+
+#jumptocontact {
+  margin-top: -80px;
+  padding-top: 80px;
 }
 
 .jumbotron-fluid {
@@ -440,13 +465,9 @@ textarea:focus {
   background: url('/Images/css_sprites.png') -90px -10px;
 }
 
-@media screen and (max-width: 1000px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-    padding-right: 120px;
-    padding-left: 120px;
-    padding-bottom:20px;
+@media screen and (max-width: 1000px){
+  .card-columns.custom-columns {
+    column-count: 1;
   }
 }
 
@@ -457,32 +478,14 @@ textarea:focus {
 }
 
 @media screen and (max-width: 780px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-    padding-right: 60px;
-    padding-left: 60px;
-    padding-bottom:20px;
-  }
-
   .skillsection .col-auto{
     max-width: 9.5rem;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .column {
-    flex: 50%;
-    max-width: 50%;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-bottom:20px;
-  }
-}
-
 @media screen and (max-width:1400px){
   .customContainer{
-    max-width: 95%;
+    min-width: 95%;
   }
 }
 
@@ -492,12 +495,7 @@ textarea:focus {
     }
   }
 
-@media screen and (max-width: 700px){
-  .skillsection .card{
-    margin: 0 0 15 auto;
-    float: none;
-  }
-
+@media screen and (max-width: 1100px){
   .box div{
     width: 0px;
     height: 0px;
@@ -555,6 +553,13 @@ textarea:focus {
   }
 }
 
+@media screen and (max-width: 700px){
+  .skillsection .card{
+    margin: 0 0 15 auto;
+    float: none;
+  }
+}
+
 @media screen and (max-width: 740px) {
   .navbar {
     width: 100%;
@@ -601,10 +606,6 @@ textarea:focus {
 
   #addmarginforcard {
     margin-top: 40px;
-  }
-
-  .customContainer{
-    max-width:95%;
   }
 
   .changeWidth {
