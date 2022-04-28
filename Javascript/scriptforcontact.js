@@ -6,7 +6,7 @@ function validate_input() {
   if (checkMessage.value == "") {
     button1.disabled = true;
   } else {
-    if (checkMessageEmail.value.indexOf("@") > -1) {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(checkMessageEmail.value)) {
       button1.disabled = false;
     } else {
       button1.disabled = true;
