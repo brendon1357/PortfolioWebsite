@@ -464,9 +464,7 @@ textarea:focus {
 }
 
 #logo:hover {
-  width: 60px; 
-  height: 60px;
-  background: url('/Images/css_sprites.png') -90px -10px;
+  background-position: -90px -10px;
 }
 
 @media screen and (max-width: 1000px){
