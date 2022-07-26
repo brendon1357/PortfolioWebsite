@@ -28,6 +28,10 @@ body, html {
   max-width: 1400px;
 }
 
+.skillsection .container{
+  max-width:1100px;
+}
+
 #jumptocontact {
   margin-top: -80px;
   padding-top: 80px;
@@ -470,24 +474,6 @@ textarea:focus {
 @media screen and (max-width: 1000px){
   .card-columns.custom-columns {
     column-count: 1;
-  }
-}
-
-@media screen and (max-width: 860px) { 
-  .skillsection .col-auto{
-    max-width: 11.5rem;
-  }
-}
-
-@media screen and (max-width: 780px) {
-  .skillsection .col-auto{
-    max-width: 9.5rem;
-  }
-}
-
-@media screen and (max-width:1400px){
-  .customContainer{
-    min-width: 95%;
   }
 }
 
