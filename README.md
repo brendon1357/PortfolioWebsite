@@ -1,6 +1,7 @@
 # Personal Portfolio Website
 
-Website hosting some of my coding projects. Built with React & Bootstrap.
+Website hosting some of my coding projects. Built with React & Bootstrap. Website is hosted using Netlify and form submissions are handled 
+through Netlify forms.
 
 ### Development Notes
 
