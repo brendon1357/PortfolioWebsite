@@ -31,6 +31,7 @@ function ContactDisplay() {
           <p>
             <input
               ref={emailRef}
+              onChange={ValidateInput}
               type="email"
               className="changeWidth"
               placeholder="Enter email*"
@@ -40,18 +41,14 @@ function ContactDisplay() {
           <p>
             <textarea
               ref={messageRef}
+              onChange={ValidateInput}
               className="changeWidth"
               name="message"
               placeholder="Enter your message here*"
             ></textarea>
           </p>
           <p>
-            <button
-              type="submit"
-              id="button1"
-              onClick={ValidateInput}
-              ref={buttonRef}
-            >
+            <button ref={buttonRef} type="submit" id="button1" disabled>
               Submit
             </button>
           </p>
