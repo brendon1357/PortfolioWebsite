@@ -25,4 +25,4 @@ If you plan to use bootstrap it can be installed with NPM by typing the command 
 ```
 npm install bootstrap --save
 ```
-You can also download React Developer Tools as a good chrome extension to help with debugging.
+You can also download React Developer Tools as a google chrome extension to help with debugging.
