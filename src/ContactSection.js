@@ -1,23 +1,17 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 
 function ContactDisplay() {
   const buttonRef = useRef();
   const messageRef = useRef();
   const emailRef = useRef();
 
-  useEffect(() => {
-    function ValidateInput() {
-      if (messageRef.current.value === "" || emailRef.current.value === "") {
-        buttonRef.current.disabled = true;
-      } else {
-        buttonRef.current.disabled = false;
-      }
+  const ValidateInput = () => {
+    if (messageRef.current.value === "" || emailRef.current.value === "") {
+      buttonRef.current.disabled = true;
+    } else {
+      buttonRef.current.disabled = false;
     }
-    ValidateInput();
-
-    messageRef.current.onkeyup = ValidateInput;
-    emailRef.current.onkeyup = ValidateInput;
-  }, []);
+  };
 
   return (
     <div className="contactpage">
@@ -52,7 +46,12 @@ function ContactDisplay() {
             ></textarea>
           </p>
           <p>
-            <button type="submit" id="button1" ref={buttonRef}>
+            <button
+              type="submit"
+              id="button1"
+              onClick={ValidateInput}
+              ref={buttonRef}
+            >
               Submit
             </button>
           </p>
