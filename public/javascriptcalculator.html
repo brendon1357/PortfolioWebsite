@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="Calculator/stylingforjavacalc.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <section class="calculator">
+      <div>
+        <input readonly type="text" class="screen" />
+      </div>
+      <div class="buttons">
+        <button type="button" class="btn btn-orange" data-num="*">x</button>
+        <button type="button" class="btn btn-orange" data-num="/">÷</button>
+        <button type="button" class="btn btn-orange" data-num="+">+</button>
+        <button type="button" class="btn btn-orange" data-num="-">-</button>
+        <button type="button" id="sqrt">
+          sqrt
+        </button>
+        <button type="button" class="btn btn-orange" data-num="(">(</button>
+        <button type="button" class="btn btn-orange" data-num=")">)</button>
+
+        <button type="button" class="btn btn-drkgrey" data-num="9">9</button>
+        <button type="button" class="btn btn-drkgrey" data-num="8">8</button>
+        <button type="button" class="btn btn-drkgrey" data-num="7">7</button>
+        <button type="button" class="btn btn-drkgrey" data-num="6">6</button>
+        <button type="button" class="btn btn-drkgrey" data-num="5">5</button>
+        <button type="button" class="btn btn-drkgrey" data-num="4">4</button>
+        <button type="button" class="btn btn-drkgrey" data-num="3">3</button>
+        <button type="button" class="btn btn-drkgrey" data-num="2">2</button>
+        <button type="button" class="btn btn-drkgrey" data-num="1">1</button>
+        <button type="button" class="btn btn-drkgrey" data-num="0">0</button>
+        <button type="button" class="btn btn-drkgrey" data-num=".">.</button>
+        <button id="info-btn">Info</button>
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <span class="close">Exit</span>
+            <p>
+              In order to perform a square root operation all you need to do is
+              input the number you wish to square root and then click the "sqrt"
+              button. There is no need to press the "=" button. The operation
+              will be performed automatically for you.
+            </p>
+          </div>
+        </div>
+        <button type="button" class="btn-equal btn-drkgrey">=</button>
+      </div>
+      <button type="button" class="btn-clear btn-drkgrey">Clear All</button>
+    </section>
+    <script src="Calculator/JavascriptCalculator.js"></script>
+  </body>
+</html>
