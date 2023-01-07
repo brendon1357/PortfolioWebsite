@@ -13,7 +13,7 @@ A single-page application, therefore, best initialized with.
 npx create-react-app my-app
 cd my-app
 ```
-Start local development server with command.
+Start local development server with the following command.
 ```
 npm start
 ```
