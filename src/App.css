@@ -209,7 +209,7 @@ a.anchor{
   padding-bottom: 40px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
   .links #linkedin{
     margin-bottom:30px;
   }
