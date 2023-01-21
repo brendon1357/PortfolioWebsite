@@ -21,11 +21,11 @@ function ForFunProjects() {
           <div className="col-sm-12 col-md-12 col-lg-6 d-flex align-self-stretch mb-5 mt-2">
             <CustomCard
               imageSrc="./Images/DecoderPictureUPDATED.png"
-              title="Desktop Decoder/Encoder App"
-              text="A simple GUI that allows any user to generate a randomized password that can then be encoded and decoded later whenever necessary. 
-                    Implements a local database. Built using Python and the CustomTkinter library. CustomTkinter provides a very easy to implement modern 
-                    looking UI."
-              URL="https://github.com/brendon1357/DecoderApp"
+              title="Password Encoder App"
+              text="A desktop application that allows a user to sign up with an account and use the application to generate 
+              secure passwords that don't need to be memorized. The true password can be encoded, so that the encoded password can be 
+              stored somewhere safely, and used to get the true password back."
+              URL="https://github.com/brendon1357/EncoderApp"
               buttonText="Github Repository"
             />
           </div>
