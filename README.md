@@ -11,6 +11,8 @@ you will need to download and install NPM or Yarn. How to get started with some 
 A single-page application, therefore, best initialized with.
 ```
 npx create-react-app my-app
+```
+```
 cd my-app
 ```
 Start local development server with the following command.
@@ -24,6 +26,8 @@ npm run build
 If you plan to use bootstrap and react-bootstrap both can be installed with NPM by typing the following commands in your my-app directory.
 ```
 npm install bootstrap --save
+```
+```
 npm install react-bootstrap --save
 ```
 You can also download React Developer Tools as a google chrome extension to help with debugging.
