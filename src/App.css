@@ -185,11 +185,15 @@ textarea:focus {
   padding-bottom: 65px;
 }
 
-a.anchor{
+.anchor{
   display: block;
   position: relative;
   top: -50px;
   visibility: hidden;
+}
+
+#jumptocontact{
+  top: -90px;
 }
 
 #logo {

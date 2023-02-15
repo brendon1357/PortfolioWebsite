@@ -26,10 +26,7 @@ function SkillsDisplay() {
 function Skill({ mWidth, mHeight, imgSrc }) {
   return (
     <div className="col mb-4 mt-2 d-flex align-self-stretch">
-      <div
-        className="card mx-auto shadow bg-body rounded"
-        style={{ maxWidth: { mWidth }, maxHeight: { mHeight } }}
-      >
+      <div className="card mx-auto shadow bg-body rounded" style={{ maxWidth: { mWidth }, maxHeight: { mHeight } }}>
         <img className="card-img-top" src={imgSrc} alt="" />
       </div>
     </div>

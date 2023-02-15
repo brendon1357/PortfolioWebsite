@@ -8,7 +8,7 @@ function CustomCard({ imageSrc, title, text, URL, buttonText }) {
         <p className="card-text">{text}</p>
       </div>
       <div className="card-footer">
-        <a href={URL} target="_blank" className="btn btn-primary">
+        <a href={URL} target="_blank" rel="no-referrer" className="btn btn-primary">
           {buttonText}
         </a>
       </div>

@@ -3,7 +3,7 @@ import CustomCard from "./DisplayCard.js";
 function ForFunProjects() {
   return (
     <div className="projectsforfun">
-      <a className="anchor" id="jumptoforfun"></a>
+      <div className="anchor" id="jumptoforfun"></div>
       <h1>Projects For Fun</h1>
       <div className="container">
         <div className="row">
@@ -20,10 +20,10 @@ function ForFunProjects() {
           </div>
           <div className="col-sm-12 col-md-12 col-lg-6 d-flex align-self-stretch mb-5 mt-2">
             <CustomCard
-              imageSrc="./Images/DecoderPictureUPDATED.png"
-              title="Password Encoder App"
+              imageSrc="./Images/PWManager.png"
+              title="Password Management App"
               text="A desktop application that allows a user to sign up with an account and use the application to generate 
-              secure passwords that don't need to be memorized. The true password can be encoded, so that the encoded password can be 
+              secure passwords that don't need to be memorized. The true password can be encrypted, so that the encrypted password can be 
               stored somewhere safely, and used to get the true password back."
               URL="https://github.com/brendon1357/EncoderApp"
               buttonText="Github Repository"
