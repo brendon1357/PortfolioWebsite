@@ -1,6 +1,7 @@
 function SkillsDisplay() {
   return (
     <div className="skillsection">
+      <div className="anchor" id="jumptoskills"></div>
       <h1>Skills</h1>
       <div className="container" style={{ maxWidth: "800px" }}>
         <div className="row justify-content-center">
@@ -17,8 +18,8 @@ function SkillsDisplay() {
           <Skill mWidth="15rem" mHeight="15rem" imgSrc="./Images/IMGHTML.png" />
           <Skill mWidth="15rem" mHeight="15rem" imgSrc="./Images/react.png" />
         </div>
-        <div style={{ paddingTop: "40px" }}></div>
       </div>
+      <div style={{ paddingTop: "40px" }}></div>
     </div>
   );
 }
@@ -26,7 +27,7 @@ function SkillsDisplay() {
 function Skill({ mWidth, mHeight, imgSrc }) {
   return (
     <div className="col mb-4 mt-2 d-flex align-self-stretch">
-      <div className="card mx-auto shadow bg-body rounded" style={{ maxWidth: { mWidth }, maxHeight: { mHeight } }}>
+      <div className="card mx-auto" style={{ maxWidth: { mWidth }, maxHeight: { mHeight }, backgroundColor: "#23272C" }}>
         <img className="card-img-top" src={imgSrc} alt="" />
       </div>
     </div>

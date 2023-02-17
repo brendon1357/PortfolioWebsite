@@ -1,7 +1,7 @@
 // Utilitize bootstrap cards to create a custom card with given properties
 function CustomCard({ imageSrc, title, text, URL, buttonText }) {
   return (
-    <div className="card text-start shadow bg-body rounded">
+    <div className="card">
       <img className="card-img-top" src={imageSrc} alt="Project" />
       <div className="card-body">
         <h5 className="card-title">{title}</h5>

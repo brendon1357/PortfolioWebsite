@@ -1,7 +1,7 @@
 // Custom navbar will appear at top of screen
 function NavBar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+    <nav className="navbar navbar-expand-lg navbar-dark fixed-top">
       <div className="container">
         <a className="navbar-brand" id="brand" href="">
           Brendon Thorne
@@ -20,7 +20,7 @@ function NavBar() {
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
           <ul className="navbar-nav ms-auto">
             <NavItem link="#" text="Home" />
-            <NavItem link="#jumptoabout" text="About" />
+            <NavItem link="#jumptoskills" text="Skills" />
             <NavItemDropdown text="Projects" />
             <NavItem link="#jumptocontact" text="Contact" />
           </ul>

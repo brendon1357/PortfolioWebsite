@@ -1,7 +1,6 @@
 import "./App.css";
 import NavBar from "./NavBar.js";
 import FeaturedProjects from "./FeaturedSection.js";
-import AboutSectionDisplay from "./AboutSection.js";
 import SkillsDisplay from "./SkillsSection.js";
 import ForFunProjects from "./ForFunSection.js";
 import ContactDisplay from "./ContactSection.js";
@@ -14,10 +13,9 @@ function App() {
     <div className="App">
       <NavBar />
       <Home />
-      <AboutSectionDisplay />
-      <SkillsDisplay />
       <FeaturedProjects />
       <ForFunProjects />
+      <SkillsDisplay />
       <ContactDisplay />
       <Footer />
     </div>

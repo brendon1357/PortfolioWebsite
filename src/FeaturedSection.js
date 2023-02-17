@@ -28,7 +28,7 @@ function KingdominoCard() {
         <iframe
           className="embed-responsive-item"
           title="Kingdomino Video"
-          style={{ borderRadius: "6px" }}
+          style={{ borderRadius: "6px 6px 0px 0px" }}
           src="https://www.youtube.com/embed/SAC4lelmnvo;&autoplay=1&mute=1"
           allowFullScreen
         ></iframe>
@@ -57,7 +57,7 @@ function ChatroomCard() {
         <iframe
           className="embed-responsive-item"
           title="Chatroom Video"
-          style={{ borderRadius: "6px" }}
+          style={{ borderRadius: "6px 6px 0px 0px" }}
           src="https://www.youtube.com/embed/7kmNrBKYKEc;&autoplay=1&mute=1"
           allowFullScreen
         ></iframe>
