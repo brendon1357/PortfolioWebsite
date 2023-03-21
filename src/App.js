@@ -9,17 +9,17 @@ import Home from "./Home.js";
 
 // Main function to pass everything to render
 function App() {
-  return (
-    <div className="App">
-      <NavBar />
-      <Home />
-      <FeaturedProjects />
-      <ForFunProjects />
-      <SkillsDisplay />
-      <ContactDisplay />
-      <Footer />
-    </div>
-  );
+    return (
+        <div className="App">
+            <NavBar />
+            <Home />
+            <FeaturedProjects />
+            <ForFunProjects />
+            <SkillsDisplay />
+            <ContactDisplay />
+            <Footer />
+        </div>
+    );
 }
 
 export default App;

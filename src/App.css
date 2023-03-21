@@ -17,6 +17,11 @@
   text-decoration-color:#0D6EFD;
 }
 
+.btn{
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
 #brand {
   font-size: 1.85rem;
   padding-top: 10px;
@@ -68,7 +73,7 @@
   padding-top:20px;
   padding-bottom:20px;
   color: white;
-  background: #177cff;
+  background: #0D6EFD;
   font-weight: bold;
   text-align: center;
   margin-right: 40px;
@@ -78,13 +83,17 @@
 }
 
 .links a:hover {
-  background: #0066ff
+  background: #0059ff;
 }
 
 .skillsection h1 {
   display: flex;
   justify-content: center;
   color: white;
+}
+
+.featuredprojects {
+  background:#181818;
 }
 
 .featuredprojects h1 {
@@ -95,13 +104,57 @@
 }
 
 .projectsforfun h1 {
+  padding-top: 40px;
   display: flex;
   justify-content: center;
   color: white;
 }
 
+.icons-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.icon img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.icon-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  max-width: 5rem;
+  max-height: 5rem;
+}
+
+.icon-label {
+  text-align: center;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 5px;
+}
+
 .contactpage {
-  background: #272727;
+  background: #181818;
   padding-top: 40px;
 }
 
@@ -109,10 +162,6 @@
   text-align: center;
   color: white;
   padding-bottom: 25px;
-}
-
-.changeWidth {
-  text-align: left;
 }
 
 form {
@@ -126,12 +175,14 @@ form {
   background: #0D6EFD;
   color: white;
   font-weight: bold;
+  font-size: 1rem;
   border-radius: 4px;
   padding: 5px;
   padding-left: 20px;
   padding-right: 20px;
-  width: 350px;
-  border:none;
+  width: 100%;
+  max-width: 550px;
+  border: none;
   cursor: pointer;
 }
 
@@ -139,14 +190,24 @@ form {
   background:#0059ff;
 }
 
+.form-control {
+  background: #111111;
+  border-color: #363636;
+  color: white;
+}
+
+.form-control:focus {
+  background: #0a0a0a;
+  color:white;
+}
+
 .changeWidth {
   width: 350px;
-  background: rgb(48, 48, 48);
+  background: #111111;
   border: none;
   color: white;
   z-index: 1;
   padding-left: 2px;
-  margin: auto;
 }
 
 form textarea {
@@ -159,6 +220,7 @@ form textarea {
 
 ::placeholder {
   color: white;
+  opacity: 0.6;
 }
 
 .infoforcontact {
@@ -174,7 +236,7 @@ form textarea {
 }
 
 #jumptoforfun{
-  top: -90px;
+  top: -50px;
 }
 
 #jumptofeatured{
@@ -201,7 +263,7 @@ form textarea {
 }
 
 .footer{
-  text-align:center;
+  text-align: center;
   padding-top: 40px;
   padding-bottom: 40px;
 }
@@ -214,5 +276,15 @@ form textarea {
 @media screen and (max-width: 800px) {
   .links #linkedin{
     margin-bottom:30px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .changeWidth{
+    max-width: 325px;
+  }
+  
+  #button1{
+    max-width: 325px;
   }
 }
