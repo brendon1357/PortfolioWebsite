@@ -9,12 +9,11 @@ body {
 }
 
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
   background-color: #272727;
 }
 
 ::-webkit-scrollbar-thumb { 
-  height: 50px; 
   background-color: #686868; 
   border-radius: 3px;
 }
@@ -24,7 +23,7 @@ body {
 }
 
 ::-webkit-scrollbar-button {
-  background-color: #333;
+  height: 0px;
 }
 
 ::-webkit-resizer { 

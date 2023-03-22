@@ -4,11 +4,7 @@ function Footer() {
             <a href="#" style={{ textDecoration: "none", cursor: "pointer" }}>
                 <div id="logo"></div>
             </a>
-            <div style={{ marginTop: "20px" }}>
-                <a href="https://www.flaticon.com/" title="sql icons" target="_blank" rel="no-referrer">
-                    Free Icons & Logos - Flaticon
-                </a>
-            </div>
+            <div style={{ marginTop: "20px", color: "white" }}>© Copyright 2023 Brendon Thorne</div>
         </div>
     );
 }

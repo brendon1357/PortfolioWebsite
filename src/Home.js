@@ -12,13 +12,13 @@ function Home() {
                 </p>
                 <div className="links">
                     <span>
-                        <a href="https://www.linkedin.com/in/brendon-thorne-70b290195/" target="_blank" rel="no-referrer" id="linkedin">
-                            LinkedIn Page
+                        <a href="https://www.linkedin.com/in/brendon-thorne-70b290195/" target="_blank" rel="no-referrer">
+                            <img src="./Images/linkedinLogo.png"></img>
                         </a>
                     </span>
                     <span>
-                        <a href="https://github.com/brendon1357" target="_blank" rel="no-referrer" id="github">
-                            Github Page
+                        <a href="https://github.com/brendon1357" target="_blank" rel="no-referrer">
+                            <img src="./Images/githubLogo.png"></img>
                         </a>
                     </span>
                 </div>
