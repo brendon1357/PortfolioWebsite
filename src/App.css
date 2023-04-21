@@ -1,278 +1,278 @@
 .navbar {
-  position: fixed;
-  width: 100%;
-  opacity: 0.8;
-  z-index: 1;
-  border-radius: 2px;
-  min-height:80px;
-  background-color:#111111;
+	position: fixed;
+	width: 100%;
+	opacity: 0.8;
+	z-index: 1;
+	border-radius: 2px;
+	min-height: 80px;
+	background-color: #111111;
 }
 
 .navbar:hover {
-  opacity: 1;
+	opacity: 1;
 }
 
 .card-title {
-  text-decoration-line:underline;
-  text-decoration-color:#0D6EFD;
+	text-decoration-line: underline;
+	text-decoration-color: #0d6efd;
 }
 
-.btn{
-  font-weight: bold;
-  font-size: 0.95rem;
+.btn {
+	font-weight: bold;
+	font-size: 0.95rem;
 }
 
 #brand {
-  font-size: 1.85rem;
-  padding-top: 10px;
-  padding-bottom: 10px;
+	font-size: 1.85rem;
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .imagedisplay {
-  background-color: #2548bb;
-  background-image: url("../public/Images/backg.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+	background-color: #2548bb;
+	background-image: url("../public/Images/backgroundDark.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
 }
 
-.centerdiv{
-  max-width: 800px;
-  max-height:700px;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  top: 40px;
+.centerdiv {
+	max-width: 800px;
+	max-height: 700px;
+	margin: 0 auto;
+	text-align: center;
+	position: relative;
+	top: 40px;
 }
 
 .aboutsection h1 {
-  padding-top:40px;
-  display: block;
-  margin: auto;
-  text-align: center;
-  border-bottom: 1px solid rgba(116, 174, 255, 0.8);
-  width: 50%;
-  color: white;
+	padding-top: 40px;
+	display: block;
+	margin: auto;
+	text-align: center;
+	border-bottom: 1px solid rgba(116, 174, 255, 0.8);
+	width: 50%;
+	color: white;
 }
 
-.aboutsection{
-  color:white;
+.aboutsection {
+	color: white;
 }
 
 .links img {
-  width: 100%;
-  height: 100%;
-  max-width: 50px;
-  max-height: 50px;
+	width: 100%;
+	height: 100%;
+	max-width: 50px;
+	max-height: 50px;
 }
 
 .links span {
-  margin-right: 20px;
-  margin-left: 20px;
+	margin-right: 20px;
+	margin-left: 20px;
 }
 
 .skillsection h1 {
-  display: flex;
-  justify-content: center;
-  color: white;
+	display: flex;
+	justify-content: center;
+	color: white;
 }
 
 .featuredprojects {
-  background:#181818;
+	background: #181818;
 }
 
 .featuredprojects h1 {
-  padding-top: 40px;
-  color:white;
-  display: flex;
-  justify-content: center;
+	padding-top: 40px;
+	color: white;
+	display: flex;
+	justify-content: center;
 }
 
 .projectsforfun h1 {
-  padding-top: 40px;
-  display: flex;
-  justify-content: center;
-  color: white;
+	padding-top: 40px;
+	display: flex;
+	justify-content: center;
+	color: white;
 }
 
 .icons-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .icon-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 }
 
 .icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 20px;
 }
 
 .icon img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: contain;
 }
 
 .icon-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  max-width: 5rem;
-  max-height: 5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	max-width: 5rem;
+	max-height: 5rem;
 }
 
 .icon-label {
-  text-align: center;
-  font-weight: bold;
-  color: #ffffff;
-  margin-top: 5px;
+	text-align: center;
+	font-weight: bold;
+	color: #ffffff;
+	margin-top: 5px;
 }
 
 .contactpage {
-  background: #181818;
-  padding-top: 40px;
+	background: #181818;
+	padding-top: 40px;
 }
 
 .changetextcolour {
-  text-align: center;
-  color: white;
-  padding-bottom: 25px;
+	text-align: center;
+	color: white;
+	padding-bottom: 25px;
 }
 
 form {
-  text-align: center;
-  border-radius: none;
-  margin: 0;
+	text-align: center;
+	border-radius: none;
+	margin: 0;
 }
 
 #button1 {
-  margin-bottom: 10px;
-  background: #0D6EFD;
-  color: white;
-  font-weight: bold;
-  font-size: 1rem;
-  border-radius: 4px;
-  padding: 5px;
-  padding-left: 20px;
-  padding-right: 20px;
-  width: 100%;
-  max-width: 550px;
-  border: none;
-  cursor: pointer;
+	margin-bottom: 10px;
+	background: #0d6efd;
+	color: white;
+	font-weight: bold;
+	font-size: 1rem;
+	border-radius: 4px;
+	padding: 5px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: 100%;
+	max-width: 550px;
+	border: none;
+	cursor: pointer;
 }
 
 #button1:hover {
-  background:#0059ff;
+	background: #0059ff;
 }
 
 .form-control {
-  background: #111111;
-  border-color: #363636;
-  color: white;
+	background: #111111;
+	border-color: #363636;
+	color: white;
 }
 
 .form-control:focus {
-  background: #0a0a0a;
-  color:white;
+	background: #0a0a0a;
+	color: white;
 }
 
 .changeWidth {
-  width: 350px;
-  background: #111111;
-  border: none;
-  color: white;
-  z-index: 1;
-  padding-left: 2px;
+	width: 350px;
+	background: #111111;
+	border: none;
+	color: white;
+	z-index: 1;
+	padding-left: 2px;
 }
 
 form textarea {
-  border: none;
-  border-radius: 10px;
-  outline: none;
-  padding-bottom: 100px;
-  z-index: 1;
+	border: none;
+	border-radius: 10px;
+	outline: none;
+	padding-bottom: 100px;
+	z-index: 1;
 }
 
 ::placeholder {
-  color: white;
-  opacity: 0.6;
+	color: white;
+	opacity: 0.6;
 }
 
 .infoforcontact {
-  color: white;
-  text-align: center;
-  padding-bottom: 65px;
+	color: white;
+	text-align: center;
+	padding-bottom: 65px;
 }
 
-.anchor{
-  display: block;
-  position: relative;
-  visibility: hidden;
+.anchor {
+	display: block;
+	position: relative;
+	visibility: hidden;
 }
 
-#jumptoforfun{
-  top: -50px;
+#jumptoforfun {
+	top: -50px;
 }
 
-#jumptofeatured{
-  top: -50px;
+#jumptofeatured {
+	top: -50px;
 }
 
-#jumptoskills{
-  top: -90px;
+#jumptoskills {
+	top: -90px;
 }
 
-#jumptocontact{
-  top: -90px;
+#jumptocontact {
+	top: -90px;
 }
 
 #logo {
-  display: inline-block;
-  background: url("../../portfolio/public/Images/css_sprites.png") -10px -10px;
-  width: 60px;
-  height: 60px;
+	display: inline-block;
+	background: url("../../portfolio/public/Images/css_sprites.png") -10px -10px;
+	width: 60px;
+	height: 60px;
 }
 
 #logo:hover {
-  background-position: -90px -10px;
+	background-position: -90px -10px;
 }
 
-.footer{
-  text-align: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
+.footer {
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
 }
 
-.card{
-  background-color:#2C2F33;
-  color:white;
+.card {
+	background-color: #2c2f33;
+	color: white;
 }
 
 @media screen and (max-width: 800px) {
-  .links #linkedin{
-    margin-bottom:30px;
-  }
+	.links #linkedin {
+		margin-bottom: 30px;
+	}
 }
 
 @media screen and (max-width: 400px) {
-  .changeWidth{
-    max-width: 325px;
-  }
-  
-  #button1{
-    max-width: 325px;
-  }
+	.changeWidth {
+		max-width: 325px;
+	}
+
+	#button1 {
+		max-width: 325px;
+	}
 }
