@@ -33,6 +33,7 @@
 	background-image: url("../public/Images/backgroundDark.jpg");
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -40,33 +41,55 @@
 }
 
 .centerdiv {
-	max-width: 800px;
-	max-height: 700px;
-	margin: 0 auto;
+	max-width: 1000px;
+	margin-left: 10px;
+	margin-right: 10px;
 	text-align: center;
 	position: relative;
-	top: 40px;
 }
 
-.aboutsection h1 {
-	padding-top: 40px;
-	display: block;
-	margin: auto;
+.centerdiv #nameHeader {
+	color: white;
+	font-size: 75px;
+	margin-top: -15px;
+	font-family: "Arial";
+}
+
+.centerdiv #openingHeader {
+	color: rgba(196, 196, 196, 0.8);
+	font-family: "Arial";
+	font-size: 50px;
+}
+
+.aboutSectionContainer {
+	padding-top: 5px;
+	background: #181818;
+}
+
+.aboutSection {
+	max-width: 1000px;
 	text-align: center;
-	border-bottom: 1px solid rgba(116, 174, 255, 0.8);
-	width: 50%;
-	color: white;
+	margin: 0 auto;
 }
 
-.aboutsection {
-	color: white;
+.aboutInfo {
+	text-align: left;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 .links img {
+	transition: filter 0.2s ease-in-out;
+	margin-bottom: 75px;
 	width: 100%;
 	height: 100%;
 	max-width: 50px;
 	max-height: 50px;
+}
+
+.links img:hover {
+	filter: saturate(2);
+	cursor: pointer;
 }
 
 .links span {
@@ -74,14 +97,17 @@
 	margin-left: 20px;
 }
 
+.aboutSection h1 {
+	display: flex;
+	justify-content: center;
+	color: white;
+	margin-top: 50px;
+}
+
 .skillsection h1 {
 	display: flex;
 	justify-content: center;
 	color: white;
-}
-
-.featuredprojects {
-	background: #181818;
 }
 
 .featuredprojects h1 {
@@ -223,18 +249,13 @@ form textarea {
 	visibility: hidden;
 }
 
-#jumptoforfun {
-	top: -50px;
-}
-
+#jumptoforfun,
 #jumptofeatured {
 	top: -50px;
 }
 
-#jumptoskills {
-	top: -90px;
-}
-
+#jumptoabout,
+#jumptoskills,
 #jumptocontact {
 	top: -90px;
 }
@@ -261,9 +282,13 @@ form textarea {
 	color: white;
 }
 
-@media screen and (max-width: 800px) {
-	.links #linkedin {
-		margin-bottom: 30px;
+@media screen and (max-width: 768px) {
+	.centerdiv #nameHeader {
+		font-size: 45px;
+	}
+
+	.centerdiv #openingHeader {
+		font-size: 30px;
 	}
 }
 
