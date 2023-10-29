@@ -22,12 +22,9 @@ function FeaturedProjects() {
 						<ChatroomCard />
 					</div>
 				</div>
-				<div className="row">
+				<div className="row" style={{ justifyContent: "center" }}>
 					<div className="col-sm-12 col-md-12 col-lg-6 d-flex align-self-stretch mb-4 mt-2">
 						<PasswordManagerCard />
-					</div>
-					<div className="col-sm-12 col-md-12 col-lg-6 d-flex align-self-stretch mb-4 mt-2">
-						<KingdominoCard />
 					</div>
 				</div>
 			</div>
@@ -43,8 +40,8 @@ function KingdominoCard() {
 			videoSrc="https://www.youtube.com/embed/SAC4lelmnvo;&autoplay=1&mute=1"
 			cardTitle="Kingdomino Computerized"
 			cardText="This is a computerized version of the award winning board game Kingdomino. This project was created in my Software Engineering class by a group of
-					four people which included myself and three of my fellow classmates. The game was made using Java and features the ability to play against AIs as well
-					as the ability to save a current game state to return to later."
+			four people which included myself and three of my fellow classmates. The game was made using Java and features the ability to play against AIs as well
+			as the ability to save a current game state to return to later."
 			URL="https://youtu.be/SAC4lelmnvo"
 			buttonText="Youtube Video"
 			techUsed="Technologies used: Java, Swing"
@@ -59,8 +56,8 @@ function ChatroomCard() {
 			videoSrc="https://www.youtube.com/embed/7kmNrBKYKEc;&autoplay=1&mute=1"
 			cardTitle="Online Chatroom"
 			cardText="An online chatroom that was made in Java using Swing for the GUI. The server for the chatroom is hosted on an AWS E2 instance and allows connections
-					through SSL sockets. This was my first personal project tackling networking. I learned a lot about how sockets work and how to make communcation
-					between server and client secure using the SSL protocol."
+			through SSL sockets. This was my first personal project tackling networking. I learned a lot about how sockets work and how to make communcation
+			between server and client secure using the SSL protocol."
 			URL="https://youtu.be/7kmNrBKYKEc"
 			buttonText="Youtube Video"
 			techUsed="Technologies used: Java, Swing, AWS, SSL/TLS"
@@ -74,8 +71,8 @@ function PlanetHopperCard() {
 			frameTitle="Planet Hopper Trailer"
 			videoSrc="https://www.youtube.com/embed/ZJjWABGwFYo;&autoplay=1&mute=1"
 			cardTitle="Planet Hopper"
-			cardText="A 2D video game built with C++ and the SFML graphics library. The game was built as a collaborative effort where my team used an Agile development 
-			process to set goals and meet those goals each project sprint. I personally developed game features including lighting, raycasting, saving/loading, 
+			cardText="A 2D video game built with C++ and the SFML graphics library. The game was built as a collaborative effort where my team used an Agile development
+			process to set goals and meet those goals each project sprint. I personally developed game features including lighting, raycasting, saving/loading,
 			collisions, weapons, steering, and more. The game engine was developed from scratch."
 			URL="https://youtu.be/ZJjWABGwFYo"
 			buttonText="Youtube Video"
@@ -90,8 +87,8 @@ function StarcraftCard() {
 			frameTitle="Starcraft AI Trailer"
 			videoSrc="https://www.youtube.com/embed/E7R422XH-S8;&autoplay=1&mute=1"
 			cardTitle="Starcraft Bot"
-			cardText="A Starcraft bot built with C++ and BWAPI. I developed the bot individually and implemented intelligent features such as scouting, 
-			base defense, resource gathering, building, and attack conditions. My bot is able to successfully defeat the default Starcraft AI and compete against other bots. 
+			cardText="A Starcraft bot built with C++ and BWAPI. I developed the bot individually and implemented intelligent features such as scouting,
+			base defense, resource gathering, building, and attack conditions. My bot is able to successfully defeat the default Starcraft AI and compete against other bots.
 			I specialized in creating a fast expansion bot with initial static defenses."
 			URL="https://youtu.be/E7R422XH-S8"
 			buttonText="Youtube Video"
@@ -106,8 +103,8 @@ function PasswordManagerCard() {
 			frameTitle="Password Manager Video"
 			videoSrc="https://www.youtube.com/embed/QK76yH1T2nk;&autoplay=1&mute=1"
 			cardTitle="Password Manager"
-			cardText="A desktop password management application where users can create accounts and generate randomized, secure passwords. 
-			I built the project with security in mind and I am using password hashing and salting techniques to protect user passwords. 
+			cardText="A desktop password management application where users can create accounts and generate randomized, secure passwords.
+			I built the project with security in mind and I am using password hashing and salting techniques to protect user passwords.
 			The application uses a MySQL database and the Fernet library to encrypt generated passwords. The BCrypt library is used for hashing and salting."
 			URL="https://youtu.be/QK76yH1T2nk"
 			buttonText="Youtube Video"
@@ -122,8 +119,8 @@ function CourseManagementCard() {
 			frameTitle="Course Tool Video"
 			videoSrc="https://www.youtube.com/embed/AWJgOOYRaSU;&autoplay=1&mute=1"
 			cardTitle="Course Management Tool"
-			cardText="A course management web application for students to register for courses and manage existing courses. 
-			Students can create accounts and then view 1000+ courses from an actual university and register for them. 
+			cardText="A course management web application for students to register for courses and manage existing courses.
+			Students can create accounts and then view 1000+ courses from an actual university and register for them.
 			Students can view their schedule and time slots, they can access/update personal information, and they can view their previous grades. "
 			URL="https://youtu.be/AWJgOOYRaSU"
 			buttonText="Youtube Video"

@@ -52,6 +52,7 @@
 	color: white;
 	font-size: 75px;
 	margin-top: -15px;
+	margin-bottom: -10px;
 	font-family: "Arial";
 }
 
@@ -61,13 +62,19 @@
 	font-size: 50px;
 }
 
+.typingAnimation {
+	font-family: "Arial";
+	font-size: 50px;
+	color: rgba(100, 100, 100);
+}
+
 .aboutSectionContainer {
 	padding-top: 5px;
 	background: #181818;
 }
 
 .aboutSection {
-	max-width: 1000px;
+	max-width: 950px;
 	text-align: center;
 	margin: 0 auto;
 }
@@ -288,6 +295,10 @@ form textarea {
 	}
 
 	.centerdiv #openingHeader {
+		font-size: 30px;
+	}
+
+	.typingAnimation {
 		font-size: 30px;
 	}
 }
