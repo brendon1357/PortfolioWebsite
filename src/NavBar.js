@@ -14,24 +14,15 @@ function NavBar() {
 				<a className="navbar-brand" id="brand" href="">
 					Brendon Thorne
 				</a>
-				<button
-					className="navbar-toggler"
-					type="button"
-					onClick={toggleMenu}
-					data-bs-toggle="collapse"
-					data-bs-target="#navbarNavDropdown"
-					aria-controls="navbarNavDropdown"
-					aria-expanded={!isMenuCollapsed}
-					aria-label="Toggle navigation"
-				>
+				<button className="navbar-toggler" type="button" onClick={toggleMenu} data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded={!isMenuCollapsed} aria-label="Toggle navigation">
 					<span className="navbar-toggler-icon"></span>
 				</button>
 				<div className={`collapse navbar-collapse ${!isMenuCollapsed ? "show" : ""}`} id="navbarNavDropdown">
 					<ul className="navbar-nav ms-auto">
 						<NavItem link="#" text="Home" onClick={toggleMenu} />
 						<NavItem link="#jumptoabout" text="About" onClick={toggleMenu} />
-						<NavItem link="#jumptoskills" text="Skills" onClick={toggleMenu} />
 						<NavItem link="#jumptofeatured" text="Projects" onClick={toggleMenu} />
+						<NavItem link="#jumptoskills" text="Skills" onClick={toggleMenu} />
 						<NavItem link="#jumptocontact" text="Contact" onClick={toggleMenu} />
 					</ul>
 				</div>

@@ -32,15 +32,21 @@ function SkillsDisplay() {
 		{ imgSrc: "./Images/IMGHTML.png", label: "HTML" },
 		{ imgSrc: "./Images/react.png", label: "React" },
 		{ imgSrc: "./Images/nodejs.png", label: "NodeJS" },
-		{ imgSrc: "./Images/mocha.png", label: "Mocha" },
-		{ imgSrc: "./Images/SQLite.png", label: "SQLite" },
+
+		{ imgSrc: "./Images/c-sharp.png", label: "C#" },
+		{ imgSrc: "./Images/net.png", label: ".NET" },
+		{ imgSrc: "./Images/docker.png", label: "Docker" },
+		{ imgSrc: "./Images/azure.png", label: "Azure" },
+		{ imgSrc: "./Images/sql-server.png", label: "SQL Server" },
+		{ imgSrc: "./Images/visual-studio.png", label: "Visual Studio" },
+		{ imgSrc: "./Images/postman-icon.png", label: "Postman" },
 	];
 
 	useEffect(() => {
 		function handleResize() {
 			// less icons per row when screen is small
 			if (window.innerWidth <= 700) {
-				setIconsPerRow(3);
+				setIconsPerRow(4);
 			} else {
 				setIconsPerRow(5);
 			}

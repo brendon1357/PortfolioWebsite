@@ -33,22 +33,6 @@ function FeaturedProjects() {
 	);
 }
 
-function KingdominoCard() {
-	return (
-		<CustomVideoCard
-			frameTitle="Kingdomino Video"
-			videoSrc="https://www.youtube.com/embed/SAC4lelmnvo;&autoplay=1&mute=1"
-			cardTitle="Kingdomino Computerized"
-			cardText="This is a computerized version of the award winning board game Kingdomino. This project was created in my Software Engineering class by a group of
-			four people which included myself and three of my fellow classmates. The game was made using Java and features the ability to play against AIs as well
-			as the ability to save a current game state to return to later."
-			URL="https://youtu.be/SAC4lelmnvo"
-			buttonText="Youtube Video"
-			techUsed="Technologies used: Java, Swing"
-		/>
-	);
-}
-
 function ChatroomCard() {
 	return (
 		<CustomVideoCard
@@ -106,7 +90,7 @@ function PasswordManagerCard() {
 			cardText="A desktop password management application where users can create accounts and generate randomized, secure passwords.
 			I built the project with security in mind and I am using password hashing and salting techniques to protect user passwords.
 			The application uses a MySQL database and the Fernet library to encrypt generated passwords. The BCrypt library is used for hashing and salting."
-			URL="https://youtu.be/QK76yH1T2nk"
+			URL="https://youtu.be/Id4TY2XWsVU"
 			buttonText="Youtube Video"
 			techUsed="Technologies used: Python, MySQL, CustomTkinter, Fernet, BCrypt, AWS, SSL/TLS"
 		/>
