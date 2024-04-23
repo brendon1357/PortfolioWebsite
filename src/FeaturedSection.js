@@ -85,7 +85,7 @@ function PasswordManagerCard() {
 	return (
 		<CustomVideoCard
 			frameTitle="Password Manager Video"
-			videoSrc="https://www.youtube.com/embed/QK76yH1T2nk;&autoplay=1&mute=1"
+			videoSrc="https://www.youtube.com/embed/Id4TY2XWsVU;&autoplay=1&mute=1"
 			cardTitle="Password Manager"
 			cardText="A desktop password management application where users can create accounts and generate randomized, secure passwords.
 			I built the project with security in mind and I am using password hashing and salting techniques to protect user passwords.
